@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktuelles Magazin</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Weiß */
+        }
+        /* Stil für das Logo */
+        #logo {
+            width: 100%;
+            display: block;
+        }
+        /* Stil für die Navigation */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            background-color: rgba(107, 132, 196, 0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
+        }
+        nav a:hover {
+            background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
+        }
+        /* Stil für den Hauptinhalt */
+        .content {
+            padding: 20px;
+            text-align: left; /* Text links ausrichten */
+            max-width: 68%; /* Maximale Breite des Inhalts */
+            margin: 0 auto; /* Zentrierung des Inhalts */
+        }
+        .content p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
+        }
+        .download-button {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .download-button img {
+            width: 100px; /* Breite des Bildes */
+            height: 100px; /* Höhe des Bildes */
+            border-radius: 10px; /* Etwas weniger runde Ecken */
+            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
+        }
+        .download-button img:hover {
+            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
+        }
+        /* Stil für die Fußzeile */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kopfzeile mit Logo -->
+    <header>
+        <img id="logo" src="Header.png" alt="Logo">
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Unser Ziel</a>
+        <a href="Heft.html">Aktuelles Magazin</a>
+	<a href="Archiv.html">Archiv</a>
+        <a href="Kontakt.html">Kontakt</a>
+        <a href="Anzeigenangebot.html">Anzeigenangebot</a>
+        <a href="Auslagestellen.html">Auslagestellen</a>
+        <a href="Team.html">Unser Team</a>
+    </nav>
+    
+    <!-- Hauptinhalt -->
+    <div class="content">
+        <h1>Aktuelles Magazin</h1>
+        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen in und um das Weschnitztal und seine Menschen. Hier gibt es das aktuelle Heft zum Download:</p>
+        <div class="download-button">
+            <a href="testWB.pdf">
+                <img src="177.png" alt="Download Icon">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Fußzeile -->
+    <footer>
+        <a href="Impressum.html">Impressum</a>
+    </footer>
+</body>
+</html>
