@@ -49,7 +49,7 @@
             margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
         }
         .team-member img {
-            width: 250px; /* Breite des Bildes */
+            max-width: 100%; /* Maximale Breite des Bildes */
             height: auto; /* Automatische Höhe */
             margin-right: 30px; /* Abstand zwischen Bild und Text */
             border-radius: 5px; /* Abgerundete Ecken für das Bild */
@@ -72,6 +72,23 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        /* Media Queries für mobile Geräte */
+        @media screen and (max-width: 768px) {
+            .content {
+                max-width: 90%; /* Breite des Inhalts für kleinere Bildschirme reduzieren */
+            }
+            .team-member img {
+                max-width: 50%; /* Bildbreite für kleinere Bildschirme reduzieren */
+                margin-right: 15px; /* Abstand zwischen Bild und Text reduzieren */
+            }
+            .team-member h2 {
+                font-size: 20px; /* Schriftgröße für Überschriften auf mobilen Geräten reduzieren */
+            }
+            .team-member p {
+                font-size: 16px; /* Schriftgröße für Texte auf mobilen Geräten reduzieren */
+            }
+        }
     </style>
 </head>
 <body>
@@ -82,9 +99,8 @@
     
     <!-- Navigation -->
     <nav>
-        <a href="index.html">Test</a>
+        <a href="index.html">mit media queries</a>
         <a href="Archiv.html">Aktuelles Magazin</a>
-	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
         <a href="Auslagestellen.html">Auslagestellen</a>
@@ -115,15 +131,4 @@
             <img src="Jakob.jpeg" alt="Jakob">
             <div class="team-member-text">
                 <h2>Jakob Eisenhauer</h2>
-                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung zum Bankkaufmann und studiert derzeit Physik an der Humboldt Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie bereichern unser Team. „Ich schätze das Weschnitztal für seine Natur und Menschen. In diesem Projekt sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Fußzeile -->
-    <footer>
-        <a href="Impressum.html">Impressum</a>
-    </footer>
-</body>
-</html>
-
+                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung zum Bankkaufmann und studiert derzeit Physik an der Humboldt Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie
