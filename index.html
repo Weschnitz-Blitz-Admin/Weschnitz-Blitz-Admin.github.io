@@ -14,7 +14,7 @@
         }
         /* Stil für das Logo */
         #logo {
-            width: 100%;
+            width: 100%; /* Volle Breite für das Logo */
             display: block;
         }
         /* Stil für die Navigation */
@@ -47,16 +47,18 @@
         }
         .team-member {
             margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
+            display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
+            align-items: center; /* Vertikal zentrieren */
         }
         .team-member img {
-            width: 100%; /* Bildbreite auf 100% setzen */
+            width: 250px; /* Breite des Bildes */
             height: auto; /* Automatische Höhe */
             border-radius: 5px; /* Abgerundete Ecken für das Bild */
-            margin-bottom: 15px; /* Abstand zwischen Bild und Text */
+            margin-right: 30px; /* Abstand zwischen Bild und Text */
         }
         .team-member-text {
-            max-width: calc(100% - 260px); /* Maximale Breite des Textbereichs */
-            margin-left: 20px; /* Abstand zwischen Bild und Text */
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100% - 250px); /* Maximale Breite des Textbereichs */
         }
         .team-member-text h2 {
             font-size: 24px; /* Größere Schriftgröße für die Überschrift */
@@ -89,7 +91,12 @@
             }
             .team-member img {
                 width: 100%; /* Bildbreite auf 100% setzen */
-                margin-bottom: 15px; /* Abstand zwischen Bild und Text */
+                margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
+                margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
+            }
+            #logo {
+                width: 80%; /* Breite des Logos auf 80% setzen */
+                margin: 0 auto; /* Zentrierung des Logos */
             }
         }
     </style>
@@ -126,7 +133,7 @@
             <img src="Hanna.jpeg" alt="Hanna">
             <div class="team-member-text">
                 <h2>Hanna Felber</h2>
-                <p>Hanna Felber ist 2 Jahre alt und in Birkenau aufgewachsen. Im letzten Jahr hat sie ihr Studium in dem Bereich Marketing und digitale Medien an der iba in Heidelberg abgeschlossen. Sie wird sich in Zukunft dem Layout und Design des Weschnitz-Blitz widmen. „Ich freue mich darauf, den Weschnitz-Blitz mit dem Team weiterzuentwickeln und dabei weiterhin über das Weschnitztal zu berichten.“</p>
+                <p>Hanna Felber ist 24 Jahre alt und in Birkenau aufgewachsen. Im letzten Jahr hat sie ihr Studium in dem Bereich Marketing und digitale Medien an der iba in Heidelberg abgeschlossen. Sie wird sich in Zukunft dem Layout und Design des Weschnitz-Blitz widmen. „Ich freue mich darauf, den Weschnitz-Blitz mit dem Team weiterzuentwickeln und dabei weiterhin über das Weschnitztal zu berichten.“</p>
             </div>
         </div>
 
@@ -134,7 +141,7 @@
             <img src="Jakob.jpeg" alt="Jakob">
             <div class="team-member-text">
                 <h2>Jakob Eisenhauer</h2>
-                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung zum Bankkaufmann und studiert derzeit Physik an der Humboldt Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie bereichern unser Team. „Ich schätze das Weschnitztal für seine Natur und Menschen. In diesem Projekt sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
+                <p>Jakob Eisenhauer ist 4 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung zum Bankkaufmann und studiert derzeit Physik an der Humboldt Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie bereichern unser Team. „Ich schätze das Weschnitztal für seine Natur und Menschen. In diesem Projekt sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
             </div>
         </div>
     </div>
