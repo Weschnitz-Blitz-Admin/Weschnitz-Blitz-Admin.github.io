@@ -32,6 +32,8 @@
             font-size: 16px;
             font-weight: bold;
             transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
+            display: inline-block;
+            white-space: nowrap; /* Verhindert Zeilenumbruch */
         }
         nav a:hover {
             background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
@@ -78,7 +80,7 @@
     <nav>
         <a href="index.html">Unser Ziel</a>
         <a href="Heft.html">Aktuelles Magazin</a>
-	<a href="Archiv.html">Archiv</a>
+        <a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
         <a href="Auslagestellen.html">Auslagestellen</a>
@@ -91,14 +93,14 @@
         <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen in und um das Weschnitztal und seine Menschen. Hier gibt es das aktuelle Heft zum Download:</p>
         <div class="download-button">
             <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="Download Icon">
+                <img src="WB177.png" alt="aktuelles Magazin">
             </a>
         </div>
     </div>
     
     <!-- Fußzeile -->
     <footer>
-        <a href="Impressum.html">Impressum</a>
+        <a href="Impressum.html" style="text-decoration: none; color: rgba(107, 132, 196, 0.8);">Impressum</a>
     </footer>
 </body>
 </html>
