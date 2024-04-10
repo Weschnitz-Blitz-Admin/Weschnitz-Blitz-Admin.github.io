@@ -46,15 +46,24 @@
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
        .download-button {
-            display: inline-block;
-            margin-top: 20px;
-        }
+    display: flex; /* Flexbox-Layout verwenden */
+    flex-wrap: wrap; /* Umbruch der Links bei Bedarf */
+    justify-content: center; /* Zentriert die Links horizontal */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.download-button a {
+    display: block; /* Damit die Anker als Block-Elemente behandelt werden */
+    margin: 0 10px 20px; /* Ändere den Abstand zwischen den Links */
+    text-align: center; /* Zentriert den Text in den Anker-Elementen */
+}
         .download-button img {
-            width: 100px; /* Breite des Bildes */
-            height: 100px; /* Höhe des Bildes */
-            border-radius: 10px; /* Etwas weniger runde Ecken */
-            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
-        }
+    	   width: 60px; /* Breite des Bildes */
+           height: 60px; /* Höhe des Bildes */
+           border-radius: 10px; /* Etwas weniger runde Ecken */
+           transition: transform 0.3s ease; /* Animierter Hover-Effekt */
+       	}
         .download-button img:hover {
             transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
         }
