@@ -10,11 +10,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Weiß */
+            background-color: #ffffff;
         }
         /* Stil für das Logo */
         #logo {
-            width: 100%;
+            width: 100%; /* Volle Breite für das Logo */
             display: block;
         }
         /* Stil für die Navigation */
@@ -23,15 +23,17 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 0 10px;
+            margin: 2px 3px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 5px;
             font-size: 16px;
             font-weight: bold;
             transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
+            display: inline-block;
+            white-space: nowrap; /* Verhindert Zeilenumbruch */
         }
         nav a:hover {
             background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
@@ -40,21 +42,54 @@
         .content {
             padding: 20px;
             text-align: left; /* Text links ausrichten */
-            max-width: 68%; /* Maximale Breite des Inhalts */
+            max-width: 70%; /* Maximale Breite des Inhalts */
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
-        .content p {
-            font-size: 18px; /* Größere Schriftgröße für den Text */
-            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
-            text-align: justify; /* Blocksatz für den Text */
+       .download-button {
+            display: inline-block;
+            margin-top: 20px;
         }
-        .content strong {
-            font-weight: bold; /* Fett formatierter Text */
+        .download-button img {
+            width: 100px; /* Breite des Bildes */
+            height: 100px; /* Höhe des Bildes */
+            border-radius: 10px; /* Etwas weniger runde Ecken */
+            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
+        }
+        .download-button img:hover {
+            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
         }
         /* Stil für die Fußzeile */
         footer {
             text-align: center;
             margin-top: 20px;
+        }
+
+        /* Media Queries für mobile Geräte */
+        @media screen and (max-width: 768px) {
+            .content {
+                max-width: 90%; /* Breite des Inhalts für kleinere Bildschirme reduzieren */
+            }
+            nav {
+                display: block;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+            .team-member {
+                display: block; /* Bild und Text untereinander anzeigen */
+            }
+            .team-member img {
+                width: 100%; /* Bildbreite auf 100% setzen */
+                margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
+                margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
+            }
+            #logo {
+                width: 80%; /* Breite des Logos auf 80% setzen */
+                margin: 0 auto; /* Zentrierung des Logos */
+            }
+            .team-member-text {
+                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
+            }
         }
     </style>
 </head>
@@ -66,7 +101,7 @@
     
     <!-- Navigation -->
     <nav>
-        <a href="index.html">Unser Ziel</a>
+        <a href="index.html">Unser Konzept</a>
         <a href="Heft.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
@@ -74,6 +109,7 @@
         <a href="Auslagestellen.html">Auslagestellen</a>
         <a href="Team.html">Unser Team</a>
     </nav>
+    
     
     <!-- Hauptinhalt -->
     <div class="content">

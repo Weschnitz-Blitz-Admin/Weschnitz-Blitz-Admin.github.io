@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unser Team</title>
+    <title>Aktuelles Magazin</title>
     <style>
         /* Allgemeine Stile */
         body {
@@ -27,7 +27,7 @@
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 5px;
             font-size: 16px;
             font-weight: bold;
@@ -45,29 +45,18 @@
             max-width: 70%; /* Maximale Breite des Inhalts */
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
-        .team-member {
-            margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
-            display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
-            align-items: center; /* Vertikal zentrieren */
+       .download-button {
+            display: inline-block;
+            margin-top: 20px;
         }
-        .team-member img {
-            width: 250px; /* Breite des Bildes */
-            height: auto; /* Automatische Höhe */
-            border-radius: 5px; /* Abgerundete Ecken für das Bild */
-            margin-right: 30px; /* Abstand zwischen Bild und Text */
+        .download-button img {
+            width: 100px; /* Breite des Bildes */
+            height: 100px; /* Höhe des Bildes */
+            border-radius: 10px; /* Etwas weniger runde Ecken */
+            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
         }
-        .team-member-text {
-            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
-            max-width: calc(100% - 280px); /* Maximale Breite des Textbereichs */
-        }
-        .team-member-text h2 {
-            font-size: 24px; /* Größere Schriftgröße für die Überschrift */
-            margin-bottom: 10px; /* Abstand nach unten */
-        }
-        .team-member-text p {
-            font-size: 18px; /* Größere Schriftgröße für den Text */
-            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
-            text-align: justify; /* Blocksatz für den Text */
+        .download-button img:hover {
+            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
         }
         /* Stil für die Fußzeile */
         footer {
@@ -112,8 +101,8 @@
     
     <!-- Navigation -->
     <nav>
-        <a href="index.html">Unser Ziel</a>
-        <a href="Archiv.html">Aktuelles Magazin</a>
+        <a href="index.html">Unser Konzept</a>
+        <a href="Heft.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -134,10 +123,17 @@
             </a>
         </div>
     </div>
+
     
     <!-- Fußzeile -->
-    <footer>
-        <a href="Impressum.html">Impressum</a>
-    </footer>
+       <!-- Fußzeile -->
+<footer style="text-align: center; margin-top: 20px;">
+    <!-- Button-Stil wie in der Navigation -->
+    <a href="Impressum.html" style="display: inline-block; margin: 0 10px; background-color: rgba(107, 132, 196, 0.8); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Impressum</a>
+    <br>
+    <br>
+    <!-- Zusätzlicher Platz -->
+    <div style="height: 10px;"></div>
+</footer
 </body>
 </html>
