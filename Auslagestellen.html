@@ -64,6 +64,21 @@
             margin-top: 20px;
         }
 
+
+	
+	/* Stil für das Desktop-Logo */
+        #logo {
+            width: 100%; /* Volle Breite für das Logo */
+            display: block;
+        }
+
+        /* Stil für das mobile Logo */
+        #logo-mobile {
+            width: 100%; /* Volle Breite für das mobile Logo */
+            display: none; /* Standardmäßig ausblenden */
+        }
+
+
         /* Media Queries für mobile Geräte */
         @media screen and (max-width: 768px) {
             .content {
@@ -83,15 +98,17 @@
                 margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
                 margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
             }
-	   #logo {
-        width: 200%; /* Breite des Logos auf 250% setzen */
-        margin-left: 0%; /* Verschiebe das zentrierte Logo um -75% seiner eigenen Breite nach links */
-        margin-right: -75%; /* Verschiebe das zentrierte Logo um -75% seiner eigenen Breite nach rechts */
-        position: relative; /* Positionierung relativ setzen */
-        left: 50%; /* Verschiebe das zentrierte Logo um 50% der Bildschirmbreite nach rechts */
-        transform: translateX(-50%); /* Korrigiere die Positionierung, um das Logo zentriert zu halten */
-        overflow: hidden; /* Überlauf des Logos ausblenden */
-    }
+
+           #logo {
+                display: none;
+            }
+
+            /* Zentriere das mobile Logo */
+            #logo-mobile {
+                display: block;
+                margin: 0 auto; /* Zentriert das Bild horizontal */
+            }
+        }
 
 
 
@@ -101,12 +118,16 @@
         }
     </style>
 </head>
+</head>
+<body>
+    <!-- Kopfzeile mit beiden Logos -->
+    <header>
+        <img id="logo" src="Header.png" alt="Desktop Logo">
+        <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
+    </header>
 <body>
     <!-- Kopfzeile mit Logo -->
-    <header>
-        <img id="logo" src="Header.png" alt="Logo">
-    </header>
-    
+       
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
