@@ -73,6 +73,19 @@
             margin-top: 20px;
         }
 
+	/* Stil für das Desktop-Logo */
+        #logo {
+            width: 100%; /* Volle Breite für das Logo */
+            display: block;
+        }
+
+        /* Stil für das mobile Logo */
+        #logo-mobile {
+            width: 100%; /* Volle Breite für das mobile Logo */
+            display: none; /* Standardmäßig ausblenden */
+        }
+
+
         /* Media Queries für mobile Geräte */
         @media screen and (max-width: 768px) {
             .content {
@@ -99,13 +112,24 @@
             .team-member-text {
                 max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
             }
+	#logo {
+                display: none;
+            }
+
+            /* Zentriere das mobile Logo */
+            #logo-mobile {
+                display: block;
+                margin: 0 auto; /* Zentriert das Bild horizontal */
+            }
+
         }
     </style>
 </head>
 <body>
     <!-- Kopfzeile mit Logo -->
-    <header>
-        <img id="logo" src="Header.png" alt="Logo">
+     <header>
+        <img id="logo" src="Header.png" alt="Desktop Logo">
+        <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
     </header>
     
     <!-- Navigation -->
