@@ -23,7 +23,7 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 2px 3px;
+            margin: 2px 10px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
@@ -44,14 +44,21 @@
             text-align: left; /* Text links ausrichten */
             max-width: 70%; /* Maximale Breite des Inhalts */
             margin: 0 auto; /* Zentrierung des Inhalts */
+
+.download-button a {
+    display: block; /* Damit die Anker als Block-Elemente behandelt werden */
+    margin: 0 5px 10px; /* Ändere den Abstand zwischen den Links */
+    text-align: center; /* Zentriert den Text in den Anker-Elementen */
+}
+
         }
        .download-button {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .download-button img {
-            width: 100px; /* Breite des Bildes */
-            height: 100px; /* Höhe des Bildes */
+            width: 250px; /* Breite des Bildes */
+            height: 50px; /* Höhe des Bildes */
             border-radius: 10px; /* Etwas weniger runde Ecken */
             transition: transform 0.3s ease; /* Animierter Hover-Effekt */
         }
@@ -76,6 +83,17 @@
         #logo-mobile {
             width: 100%; /* Volle Breite für das mobile Logo */
             display: none; /* Standardmäßig ausblenden */
+        }
+
+.ut {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        }
+
+.ut p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
         }
 
 
@@ -144,7 +162,7 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
-        <a href="Heft.html">Aktuelles Magazin</a>
+        <a href="Magazin.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -157,13 +175,24 @@
 
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Aktuelles Magazin</h1>
-        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen in und um das Weschnitztal und seine Menschen. Hier gibt es das aktuelle Heft zum Download:</p>
+        <h1>Anzeigenangebot</h1>
+<div class="ut">
+        <p>Sie wollen für Ihr Unternehmen im Weschnitz-Blitz werben? Hier erhalten Sie unsere Angebotsübersicht mit allen wichtigen Informationen: </p>
         <div class="download-button">
-            <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="aktuelles Magazin">
+            <a href="Angebotsübersicht lokal.pdf">
+                <img src="Angebotsübersicht lokal.png" alt="Angebotsübersicht">
             </a>
+	    <a href="Angebotsübersicht überregional.pdf">
+                <img src="Angebotsübersicht überregional.png" alt="Angebotsübersicht">
+            </a>
+
         </div>
+	<p>Sollten Sie noch Fragen haben oder ein individuelles Angebot für Ihre Anzeige wünschen, kontaktieren Sie uns gerne! <br>
+	Sie erreichen uns am besten per Mail:</p>
+	<p> <strong>
+        E-Mail: info@weschnitz-blitz.de<br> 
+        Telefon: 0178 3100280<br> </strong> </p>  
+ </div>
     </div>
 
     

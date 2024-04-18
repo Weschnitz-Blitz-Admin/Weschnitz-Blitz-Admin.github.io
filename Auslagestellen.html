@@ -23,7 +23,7 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 2px 3px;
+            margin: 2px 10px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
@@ -47,11 +47,11 @@
         }
        .download-button {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .download-button img {
-            width: 100px; /* Breite des Bildes */
-            height: 100px; /* Höhe des Bildes */
+            width: 250px; /* Breite des Bildes */
+            height: 50px; /* Höhe des Bildes */
             border-radius: 10px; /* Etwas weniger runde Ecken */
             transition: transform 0.3s ease; /* Animierter Hover-Effekt */
         }
@@ -78,6 +78,16 @@
             display: none; /* Standardmäßig ausblenden */
         }
 
+.ut {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        }
+
+.ut p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
+        }
 
 
 
@@ -144,7 +154,7 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
-        <a href="Heft.html">Aktuelles Magazin</a>
+        <a href="Magazin.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -157,14 +167,16 @@
 
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Aktuelles Magazin</h1>
-        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen in und um das Weschnitztal und seine Menschen. Hier gibt es das aktuelle Heft zum Download:</p>
+        <h1>Auslagestellen</h1>
+ <div class="ut">
+        <p>Neben der digitalen Version des Magazins, ist die aktuelle Ausgabe des Weschnitz-Blitz auch an über 50 Ausgabestellen im gesamten Weschnitztal kostenlos zu erhalten. Die vollständige Liste der Auslagestellen gibt es hier zum Download:</p>
         <div class="download-button">
-            <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="aktuelles Magazin">
+            <a href="Auslagestellen.pdf">
+                <img src="Auslagestellen.png" alt="Auslagestellen">
             </a>
         </div>
     </div>
+ </div>
 
     
     <!-- Fußzeile -->

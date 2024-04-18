@@ -23,7 +23,7 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 2px 3px;
+            margin: 2px 10px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
@@ -85,6 +85,17 @@
             display: none; /* Standardmäßig ausblenden */
         }
 
+.ut {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        }
+
+.ut p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
+        }
+
 
         /* Media Queries für mobile Geräte */
         @media screen and (max-width: 768px) {
@@ -135,7 +146,7 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
-        <a href="Heft.html">Aktuelles Magazin</a>
+        <a href="Magazin.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -144,50 +155,20 @@
     </nav>
     
 
-    
-
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Aktuelles Magazin</h1>
-        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen in und um das Weschnitztal und seine Menschen. Hier gibt es das aktuelle Heft zum Download:</p>
-        <div class="download-button">
+        <h1>Archiv</h1>
+ <div class="ut">
+<p> Hier wird es bald die vergangenen Ausgaben zum kostenlosen Download geben. </p>
+    <br>
+<br>
 
-            <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 177">
-            </a>
+<br>
 
- 	    <a href="WB176 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 176">
-            </a>
+<br>
+</div>
+</div>
 
-	    <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 175">
-            </a>
-
- 	    <a href="WB176 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 174">
-            </a>
-
-	    <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 173">
-            </a>
-
- 	    <a href="WB176 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 172">
-            </a>
-
-	    <a href="WB177 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 171">
-            </a>
-
- 	    <a href="WB176 Webversion.pdf">
-                <img src="WB177.png" alt="Nr. 170">
-            </a>
-
-        </div>
-    </div>
-
-    
     <!-- Fußzeile -->
        <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">

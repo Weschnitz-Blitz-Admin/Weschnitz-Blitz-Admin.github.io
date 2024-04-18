@@ -23,7 +23,7 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 2px 3px;
+            margin: 2px 10px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
@@ -76,6 +76,17 @@
             display: none; /* Standardmäßig ausblenden */
         }
 
+.ut {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        }
+
+.ut p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
+        }
+
 
         /* Media Queries für mobile Geräte */
         @media screen and (max-width: 768px) {
@@ -121,7 +132,7 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
-        <a href="Heft.html">Aktuelles Magazin</a>
+        <a href="Magazin.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -133,16 +144,17 @@
     <!-- Hauptinhalt -->
     <div class="content">
         <h1>Impressum</h1>
+<div class="ut">
         <p><strong>Schneider & Eisenhauer Verlag GbR</strong></p>
         <p>Kapellenweg 1a<br>69509 Mörlenbach<br>Deutschland</p>
         <p><strong>Vertreten durch die Gesellschafter Melena Schneider und Jakob Eisenhauer.</strong></p>
         <p><strong>Kontakt</strong><br>
         E-Mail: info@weschnitz-blitz.de<br>
-        Telefon: ----<br>
+        Telefon: 0178 3100280<br>
         Internet: www.weschnitz-blitz.de</p>
-        <p><strong>Umsatzsteueridentifikationsnummer </strong> gemäß §27a Umsatzsteuergesetz: Neuvergabe</p>
+        <p><strong>Umsatzsteueridentifikationsnummer </strong> gemäß §27a Umsatzsteuergesetz: DE366956981</p>
     </div>
-    
+     </div>
 </body>
 </html>
 

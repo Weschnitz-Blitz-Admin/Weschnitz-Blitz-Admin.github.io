@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Aktuelles Magazin</title>
     <style>
         /* Allgemeine Stile */
         body {
@@ -63,8 +63,7 @@
             text-align: center;
             margin-top: 20px;
         }
-
-	/* Stil für das Desktop-Logo */
+/* Stil für das Desktop-Logo */
         #logo {
             width: 100%; /* Volle Breite für das Logo */
             display: block;
@@ -109,6 +108,13 @@
                 margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
             }
             #logo {
+                width: 80%; /* Breite des Logos auf 80% setzen */
+                margin: 0 auto; /* Zentrierung des Logos */
+            }
+            .team-member-text {
+                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
+            }
+	#logo {
                 display: none;
             }
 
@@ -118,16 +124,12 @@
                 margin: 0 auto; /* Zentriert das Bild horizontal */
             }
 
-            .team-member-text {
-                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
-            }
         }
     </style>
 </head>
 <body>
     <!-- Kopfzeile mit Logo -->
-    
-    <header>
+   <header>
         <img id="logo" src="Header.png" alt="Desktop Logo">
         <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
     </header>
@@ -143,19 +145,24 @@
         <a href="Auslagestellen.html">Auslagestellen</a>
         <a href="Team.html">Unser Team</a>
     </nav>
+    
+
+    
+
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Kontakt</h1>
-
+        <h1>Aktuelles Magazin</h1>
 <div class="ut">
-        <p>Ob Lob, Kritik, Vorschläge oder Wünsche, wir freuen uns auf Ihre Nachricht! Oder wollen Sie im Weschnitz-Blitz für Ihr Unternehmen oder eine Veranstaltung werben? Treten Sie gerne an uns heran. <br 
->Wir sind am besten per Mail erreichbar:</p>
-        <p> <strong>
-        E-Mail: info@weschnitz-blitz.de<br> 
-        Telefon: 0178 3100280<br> </strong>    
-   </div>
+        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen rund um und über das Weschnitztal. Hier gibt es die aktuelle Ausgabe zum kostenlosen Download:</p>
+        <div class="download-button">
+            <a href="WB177 Webversion.pdf">
+                <img src="WB177.png" alt="aktuelles Magazin">
+            </a>
+        </div>
     </div>
+</div>
 
+    
     <!-- Fußzeile -->
        <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">

@@ -23,7 +23,7 @@
             margin-top: 20px;
         }
         nav a {
-            margin: 2px 3px;
+            margin: 2px 10px;
             text-decoration: none;
             background-color: rgba(107, 132, 196, 0.8);
             color: white;
@@ -46,15 +46,16 @@
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
         .team-member {
-            margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
+            margin-bottom: 0px; /* Abstand zwischen den Teammitgliedern */
             display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
             align-items: center; /* Vertikal zentrieren */
         }
         .team-member img {
             width: 250px; /* Breite des Bildes */
             height: auto; /* Automatische Höhe */
-            border-radius: 5px; /* Abgerundete Ecken für das Bild */
-            margin-right: 30px; /* Abstand zwischen Bild und Text */
+            border-radius: 2px; /* Abgerundete Ecken für das Bild */
+            margin-right: 40px; /* Abstand zwischen Bild und Text */
+	    
         }
         .team-member-text {
             flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
@@ -62,7 +63,7 @@
         }
         .team-member-text h2 {
             font-size: 24px; /* Größere Schriftgröße für die Überschrift */
-            margin-bottom: 10px; /* Abstand nach unten */
+            margin-bottom: 20px; /* Abstand nach unten */
         }
         .team-member-text p {
             font-size: 18px; /* Größere Schriftgröße für den Text */
@@ -84,6 +85,16 @@
         #logo-mobile {
             width: 100%; /* Volle Breite für das mobile Logo */
             display: none; /* Standardmäßig ausblenden */
+        }
+.ut {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        }
+
+.ut p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
         }
 
 
@@ -133,7 +144,7 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html">Unser Konzept</a>
-        <a href="Heft.html">Aktuelles Magazin</a>
+        <a href="Magazin.html">Aktuelles Magazin</a>
 	<a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
@@ -143,33 +154,31 @@
     
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Unser Team</h1>
-        
-        <div class="team-member">
-            <img src="Melena.png" alt="Melena">
+        <h1>Unser Konzept</h1>  
+
+ <div class="team-member">
+            <img src="Karte.png" alt="Melena">
             <div class="team-member-text">
-                <h2>Melena Schneider</h2>
-                <p>Melena Schneider ist 23 Jahre alt und in Mörlenbach aufgewachsen. Sie studiert derzeit an der Technischen Universität Berlin den Studiengang „Kultur und Technik“. Im Weschnitz-Blitz Team ist sie für die Textarbeit, Recherche sowie Organisation zuständig. „Ich freue mich sehr darauf, mit vielen Menschen aus der Region ins Gespräch zu kommen und über Neuentdecktes sowie Altbekanntes im schönen Weschnitztal berichten zu dürfen.“</p>
-            </div>
+              
+                <p>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet. Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahm unser Team, bestehend aus Hanna Felber, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins. </p>
+
+<p> Was uns bei der Arbeit am Weschnitz-Blitz leitet, ist das Konzept der Nachhaltigkeit. Diesen Begriff hört man häufig. Wir möchten daher gerne genauer erklären, was wir darunter verstehen. Nachhaltigkeit lässt sich in drei Bereiche unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit. </p>
+
+<p> Der Bereich der sozialen Nachhaltigkeit zeigt sich in unserem Projekt darin, dass wir die vielfältigen Beiträge herausstellen wollen, die Menschen hier in der Region zum gesellschaftlichen Zusammenleben und für das kulturelle Angebot des Weschnitztals leisten. Dabei ist es uns wichtig, dass unsere Inhalte für alle verfügbar sind: Der Weschnitz-Blitz liegt kostenlos an über 50 Abholstellen im Weschnitztal aus. Darüber hinaus besteht die Möglichkeit, ihn per Post im Abonnement zu erhalten oder auf dieser Homepage kostenfrei als Digitalversion herunterzuladen. </p>
+
+
+ </div>
         </div>
 
-        <div class="team-member">
-            <img src="Hanna.png" alt="Hanna">
-            <div class="team-member-text">
-                <h2>Hanna Felber</h2>
-                <p>Hanna Felber ist 24 Jahre alt und in Birkenau aufgewachsen. Im letzten Jahr hat sie ihr Studium in dem Bereich Marketing und digitale Medien an der iba in Heidelberg abgeschlossen. Sie wird sich in Zukunft dem Layout und Design des Weschnitz-Blitz widmen. „Ich freue mich darauf, den Weschnitz-Blitz mit dem Team weiterzuentwickeln und dabei weiterhin über das Weschnitztal zu berichten.“</p>
-            </div>
-        </div>
+<div class="ut">
 
-        <div class="team-member">
-            <img src="Jakob.png" alt="Jakob">
-            <div class="team-member-text">
-                <h2>Jakob Eisenhauer</h2>
-                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung zum Bankkaufmann und studiert derzeit Physik an der Humboldt Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie bereichern unser Team. „Ich schätze das Weschnitztal für seine Natur und Menschen. In diesem Projekt sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
-            </div>
-        </div>
-    </div>
-    
+
+<p> Wir möchten auch wirtschaftlich nachhaltig sein. Das bedeutet für uns, nicht nur die Kosten für Druck und Honorare zu decken, sondern auch ausreichende Rücklagen zu bilden, um zukünftige Ziele, die mit unserem Konzept harmonieren, zu erreichen. Finanziert wird der Weschnitz-Blitz ausschließlich durch die Einnahmen aus Anzeigen und Inseraten regional ansässiger Unternehmen. Nicht zuletzt sehen wir einen Teil unserer Aufgabe darin, mit unserem Magazin ein attraktives Werbeumfeld für die lokale Wirtschaft zu bieten, um sie auf diese Weise zu stärken. </p>
+
+<p> Durch die Wahl von FSC- zertifiziertem ungestrichenem Naturpapier und der durch uns geförderten Werbung für Inhalte mit ökologischem Anspruch, gehen wir schließlich auch erste Schritte im Bereich der ökologischen Nachhaltigkeit. Unser Ziel für das erste Jahr ist es zudem, einen regionalen Druckpartner zu finden, durch welchen Lieferwege verkürzt und ein regional ansässiges Druckunternehmen unterstützt werden soll.
+</p>
+</div>
+              
     <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">
     <!-- Button-Stil wie in der Navigation -->
