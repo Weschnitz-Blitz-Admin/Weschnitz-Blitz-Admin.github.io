@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weschnitz-Blitz</title>
+    <meta name="description" content="Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet. Kontakt: info@weschnitz-blitz.de">
     <style>
         /* Allgemeine Stile */
         body {
@@ -46,25 +47,37 @@
             max-width: 70%; /* Maximale Breite des Inhalts */
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
-       .download-button {
-            display: inline-block;
-            margin-top: 20px;
+        .team-member {
+            margin-bottom: 0px; /* Abstand zwischen den Teammitgliedern */
+            display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
+            align-items: center; /* Vertikal zentrieren */
         }
-        .download-button img {
-            width: 350px; /* Breite des Bildes */
-            height: auto; /* Höhe des Bildes */
-            border-radius: 5px; /* Etwas weniger runde Ecken */
-            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
+        .team-member img {
+            width: 250px; /* Breite des Bildes */
+            height: auto; /* Automatische Höhe */
+            border-radius: 2px; /* Abgerundete Ecken für das Bild */
+            margin-right: 40px; /* Abstand zwischen Bild und Text */
+	    
         }
-        .download-button img:hover {
-            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
+        .team-member-text {
+            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
+            max-width: calc(100% - 280px); /* Maximale Breite des Textbereichs */
+        }
+        .team-member-text h2 {
+            font-size: 24px; /* Größere Schriftgröße für die Überschrift */
+            margin-bottom: 20px; /* Abstand nach unten */
+        }
+        .team-member-text p {
+            font-size: 18px; /* Größere Schriftgröße für den Text */
+            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
+            text-align: justify; /* Blocksatz für den Text */
         }
         /* Stil für die Fußzeile */
         footer {
             text-align: center;
             margin-top: 20px;
         }
-/* Stil für das Desktop-Logo */
+	/* Stil für das Desktop-Logo */
         #logo {
             width: 100%; /* Volle Breite für das Logo */
             display: block;
@@ -75,7 +88,6 @@
             width: 100%; /* Volle Breite für das mobile Logo */
             display: none; /* Standardmäßig ausblenden */
         }
-
 .ut {
             flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
             max-width: calc(100%); /* Maximale Breite des Textbereichs */
@@ -108,14 +120,7 @@
                 margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
                 margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
             }
-            #logo {
-                width: 80%; /* Breite des Logos auf 80% setzen */
-                margin: 0 auto; /* Zentrierung des Logos */
-            }
-            .team-member-text {
-                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
-            }
-	#logo {
+              #logo {
                 display: none;
             }
 
@@ -124,20 +129,22 @@
                 display: block;
                 margin: 0 auto; /* Zentriert das Bild horizontal */
             }
-
+            }
+            .team-member-text {
+                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
+            }
         }
     </style>
 </head>
 <body>
     <!-- Kopfzeile mit Logo -->
-   <header>
+    <header>
     <a href="index.html">
         <img id="logo" src="Header.png" alt="Desktop Logo">
     </a>
     <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
     
 </header>
-
     
     <!-- Navigation -->
     <nav>
@@ -150,25 +157,34 @@
         <a href="Team.html">Unser Team</a>
     </nav>
     
-
-    
-
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Aktuelles Magazin</h1>
-<div class="ut">
-        <p>Der Weschnitz-Blitz erscheint alle sechs Wochen mit interessanten Themen rund um und über das Weschnitztal. Hier erhalten Sie die aktuelle Ausgabe digital. Sie möchten lieber, dass der jeweils neuste Weschnitz-Blitz per Post zu Ihnen kommt? Für 5 Euro senden wir Ihnen den Weschnitz-Blitz als Printausgabe persönlich zu. Schreiben Sie uns einfach an: <strong><strong> info@weschnitz-blitz.de </strong></p>
-        <div class="download-button">
-            <a href="WB179 Webversion.pdf">
-                <img src="CoverWB179.jpg" alt="aktuelles Magazin">
-            </a>
-        </div>
-    </div>
-</div>
+        <h1>Unser Konzept</h1>  
 
-    
+ <div class="team-member">
+            <img src="Karte transparent.png" alt="Lage Weschnitztal">
+            <div class="team-member-text">
+              
+                <p><strong>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet.</strong> Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahm unser Team, bestehend aus Hanna Felber, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins. </p>
+
+<p><strong>Der Weschnitz-Blitz soll nachhaltig konzipiert sein.</strong> Nachhaltigkeit - Das hört man häufig. Wir möchten daher gerne genauer erklären, was wir darunter verstehen. Für unser Konzept lässt sich Nachhaltigkeit grob in drei Bereiche unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit. </p>
+
+<p> Der Bereich der <strong>sozialen Nachhaltigkeit</strong> zeigt sich in unserem Projekt darin, dass wir die vielfältigen Beiträge herausstellen wollen, die Menschen hier in der Region zum gesellschaftlichen Zusammenleben und für das kulturelle Angebot des Weschnitztals leisten. Dabei ist es uns wichtig, dass unsere Inhalte für alle verfügbar sind: Der Weschnitz-Blitz liegt kostenlos an über 50 Abholstellen im Weschnitztal aus. Darüber hinaus besteht die Möglichkeit, ihn per Post im Abonnement zu erhalten oder auf dieser Homepage kostenfrei als Digitalversion herunterzuladen. </p>
+
+
+ </div>
+        </div>
+
+<div class="ut">
+
+
+<p> Wir möchten auch <strong>wirtschaftlich nachhaltig</strong> sein. Das bedeutet für uns, nicht nur die Kosten für Druck und Honorare zu decken, sondern auch ausreichende Rücklagen zu bilden, um zukünftige Ziele, die mit unserem Konzept harmonieren, zu erreichen. Finanziert wird der Weschnitz-Blitz ausschließlich durch die Einnahmen aus Anzeigen und Inseraten der hier werbenden Unternehmen. Nicht zuletzt sehen wir einen Teil unserer Aufgabe darin, mit unserem Magazin ein attraktives Werbeumfeld für die lokale Wirtschaft zu bieten, um sie auf diese Weise zu stärken. </p>
+
+<p> Durch die Wahl von FSC- zertifiziertem ungestrichenem Naturpapier und der durch uns geförderten Werbung für Inhalte mit ökologischem Anspruch, gehen wir schließlich auch erste Schritte im Bereich der <strong>ökologischen Nachhaltigkeit</strong>. Eines unserer Ziele für das Jahr 2024 ist es zudem, einen regionalen Druckpartner zu finden, durch welchen Lieferwege verkürzt und ein regional ansässiges Druckunternehmen unterstützt werden soll.
+</p>
+</div>
+              
     <!-- Fußzeile -->
-       <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">
     <!-- Button-Stil wie in der Navigation -->
     <a href="Impressum.html" style="display: inline-block; margin: 0 10px; background-color: rgba(107, 132, 196, 0.8); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Impressum</a>
@@ -176,6 +192,6 @@
     <br>
     <!-- Zusätzlicher Platz -->
     <div style="height: 10px;"></div>
-</footer
+</footer>
 </body>
 </html>
