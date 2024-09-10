@@ -11,70 +11,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #E0F7FA;
-        }
-        /* Stil für das Logo */
-        #logo {
-            width: 100%; /* Volle Breite für das Logo */
-            display: block;
-        }
-        /* Stil für die Navigation */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            margin: 2px 10px;
-            text-decoration: none;
-            background-color: rgba(107, 132, 196, 0.8);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
-            display: inline-block;
-            white-space: nowrap; /* Verhindert Zeilenumbruch */
-        }
-        nav a:hover {
-            background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
-        }
-        /* Stil für den Hauptinhalt */
-        .content {
-            padding: 20px;
-            text-align: left; /* Text links ausrichten */
-            max-width: 70%; /* Maximale Breite des Inhalts */
-            margin: 0 auto; /* Zentrierung des Inhalts */
-
-.download-button a {
-    display: block; /* Damit die Anker als Block-Elemente behandelt werden */
-    margin: 0 5px 10px; /* Ändere den Abstand zwischen den Links */
-    text-align: center; /* Zentriert den Text in den Anker-Elementen */
-}
-
-        }
-       .download-button {
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .download-button img {
-            width: 250px; /* Breite des Bildes */
-            height: 50px; /* Höhe des Bildes */
-            border-radius: 10px; /* Etwas weniger runde Ecken */
-            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
-        }
-        .download-button img:hover {
-            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
-        }
-        /* Stil für die Fußzeile */
-        footer {
-            text-align: center;
-            margin-top: 20px;
+            background-color: rgba(217, 248, 248, 1.0);
+            color: #333333; /* Alle Texte in Dunkelgrau */
+            font-size: 18px; /* Grundschriftgröße */
         }
 
-
-	
-	/* Stil für das Desktop-Logo */
+        /* Stil für das Desktop-Logo */
         #logo {
             width: 100%; /* Volle Breite für das Logo */
             display: block;
@@ -86,129 +28,156 @@
             display: none; /* Standardmäßig ausblenden */
         }
 
-.ut {
-            flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
-            max-width: calc(100%); /* Maximale Breite des Textbereichs */
+        /* Stil für die zentrierte .webp-Grafik */
+        .download-image {
+            display: block;
+            max-width: 70%;
+            width: 100%; /* Nimmt die volle Breite des Textbereichs ein */
+            height: auto; /* Höhe wird automatisch berechnet */
+            margin: 20px auto; /* Zentriere die Grafik und füge Abstand oben/unten hinzu */
         }
 
-.ut p {
-            font-size: 18px; /* Größere Schriftgröße für den Text */
-            line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
-            text-align: justify; /* Blocksatz für den Text */
+        /* Stil für die Navigation */
+        nav {
+            text-align: center;
+            margin-top: 20px;
         }
 
+        nav a {
+            margin: 2px 10px;
+            text-decoration: none;
+            background-color: rgba(107, 132, 196, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px; /* Schriftgröße der Navigationslinks */
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
+            display: inline-block;
+            white-space: nowrap; /* Verhindert Zeilenumbruch */
+        }
 
+        nav a:hover {
+            background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
+        }
 
+        /* Stil für den Hauptinhalt */
+        .content {
+            padding: 20px;
+            text-align: left; /* Text links ausrichten */
+            max-width: 70%; /* Maximale Breite des Inhalts */
+            margin: 0 auto; /* Zentrierung des Inhalts */
+            font-size: 18px; /* Größere Schriftgröße für den Inhalt */
+        }
 
+        .download-button-container {
+            display: flex;
+            justify-content: center; /* Zentriert die Buttons horizontal */
+            gap: 20px; /* Abstand zwischen den Buttons */
+            margin-top: 10px;
+        }
+
+        .download-button a {
+            display: inline-block; /* Buttons nebeneinander anzeigen */
+        }
+
+        .download-button img {
+            width: 250px; /* Breite des Bildes */
+            height: 50px; /* Höhe des Bildes */
+            border-radius: 5px; /* Etwas weniger runde Ecken */
+            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
+        }
+
+        .download-button img:hover {
+            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
+        }
+
+        /* Stil für die Fußzeile */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
 
         /* Media Queries für mobile Geräte */
         @media screen and (max-width: 768px) {
-            .content {
-                max-width: 90%; /* Breite des Inhalts für kleinere Bildschirme reduzieren */
-            }
-            nav {
-                display: block;
-            }
-            nav a {
-                margin: 10px 0;
-            }
-            .team-member {
-                display: block; /* Bild und Text untereinander anzeigen */
-            }
-            .team-member img {
-                width: 100%; /* Bildbreite auf 100% setzen */
-                margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
-                margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
-            }
-
-
-
-
-           #logo {
+            /* Desktop-Logo ausblenden */
+            #logo {
                 display: none;
             }
 
-            /* Zentriere das mobile Logo */
+            /* Mobile-Logo anzeigen */
             #logo-mobile {
                 display: block;
                 margin: 0 auto; /* Zentriert das Bild horizontal */
             }
-        }
 
+            .content {
+                max-width: 90%; /* Breite des Inhalts für kleinere Bildschirme reduzieren */
+            }
 
-
-
-            .team-member-text {
-                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
+            nav a {
+                margin: 10px 0;
             }
         }
     </style>
 </head>
-</head>
+
 <body>
     <!-- Kopfzeile mit beiden Logos -->
-
-
-
     <header>
-    <a href="index.html">
-        <img id="logo" src="Header.png" alt="Desktop Logo">
-    </a>
-    <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
-    
-</header>
+        <a href="index.html">
+            <img id="logo" src="Header.png" alt="Desktop Logo">
+        </a>
+        <img id="logo-mobile" src="Header2.png" alt="Mobiles Logo">
+    </header>
 
-
-
-<body>
-    <!-- Kopfzeile mit Logo -->
-       
     <!-- Navigation -->
     <nav>
         <a href="Konzept.html">Unser Konzept</a>
         <a href="Magazin.html">Aktuelles Magazin</a>
-	<a href="Archiv.html">Archiv</a>
+        <a href="Archiv.html">Archiv</a>
         <a href="Kontakt.html">Kontakt</a>
         <a href="Anzeigenangebot.html">Anzeigenangebot</a>
         <a href="Auslagestellen.html">Auslagestellen</a>
         <a href="Team.html">Unser Team</a>
     </nav>
-    
-
-    
 
     <!-- Hauptinhalt -->
     <div class="content">
         <h1>Anzeigenangebot</h1>
-<div class="ut">
-        <p>Sie wollen für Ihr Unternehmen im Weschnitz-Blitz werben? Der Redaktionsschluss für das Magazin, welches am 15 Oktober 2024 erscheint, ist <strong>Mittwoch, der 25 September 2024 </strong>. Hier erhalten Sie unsere Angebotsübersicht mit allen weiteren Informationen: </p>
-        <div class="download-button">
-            <a href="Angebotsübersicht lokal.pdf">
-                <img src="Angebotsübersicht lokal.png" alt="Angebotsübersicht">
-            </a>
-	    <a href="Angebotsübersicht überregional.pdf">
-                <img src="Angebotsübersicht überregional.png" alt="Angebotsübersicht">
-            </a>
+        <div class="ut">
+            <p>Sie wollen für Ihr Unternehmen im Weschnitz-Blitz werben? Kontaktieren Sie uns einfach. <br>
+            Jakob Eisenhauer steht für Sie als Ansprechpartner gerne bereit!</p>
+            <p><strong>
+            E-Mail: jakob.eisenhauer@weschnitz-blitz.de<br> 
+            Telefon: Eine Terminvereinbarung ist jederzeit möglich.<br> </strong></p>
+            <br>
+            <p><strong><h2><center>Hier finden Sie unser Anzeigenangebot:</center></h2></strong></p>
 
+            <!-- .webp Grafik anstelle der Buttons -->
+            <img src="Angebotsübersicht.webp" alt="Angebotsübersicht" class="download-image">
+
+            <p style="text-align: justify;">Alle hier aufgeführten Konditionen sind zuzüglich 19% Mehrwertsteuer zu verstehen. Der <strong>Werbebereich</strong> befindet sich am Ende des Magazins. Noch mehr Informationen zum Weschnitz-Blitz, <strong>Erscheinungstermine sowie weitere Mediadaten</strong> gibt es in unserer Angebotsübersicht:</p>
+
+
+            <div class="download-button-container">
+                <div class="download-button">
+                    <a href="Angebotsübersicht lokal.pdf">
+                        <img src="Angebotsübersicht lokal.png" alt="Angebotsübersicht">
+                    </a>
+                    <a href="Angebotsübersicht überregional.pdf">
+                        <img src="Angebotsübersicht überregional.png" alt="Angebotsübersicht">
+                    </a>
+                </div>
+            </div>
         </div>
-	<p>Sollten Sie noch Fragen haben oder ein individuelles Angebot für Ihre Anzeige wünschen, kontaktieren Sie uns einfach. <br>
-	Jakob Eisenhauer steht für Sie als Ansprechpartner gerne bereit!</p>
-	<p> <strong>
-        E-Mail: jakob.eisenhauer@weschnitz-blitz.de<br> 
-        Telefon: Eine Terminvereinbarung ist jederzeit möglich.<br> </strong> </p>  
- </div>
     </div>
 
-    
     <!-- Fußzeile -->
-       <!-- Fußzeile -->
-<footer style="text-align: center; margin-top: 20px;">
-    <!-- Button-Stil wie in der Navigation -->
-    <a href="Impressum.html" style="display: inline-block; margin: 0 10px; background-color: rgba(107, 132, 196, 0.8); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Impressum</a>
-    <br>
-    <br>
-    <!-- Zusätzlicher Platz -->
-    <div style="height: 10px;"></div>
-</footer
+    <footer style="text-align: center; margin-top: 20px;">
+        <a href="Impressum.html" style="display: inline-block; margin: 0 10px; background-color: rgba(107, 132, 196, 0.8); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Impressum</a>
+        <br><br>
+        <div style="height: 10px;"></div>
+    </footer>
 </body>
 </html>
