@@ -111,6 +111,9 @@
 	 <img src="Webbilder-14.webp" id="bg14" alt="Background Image 14">
     	 <img src="Webbilder-15.webp" id="bg15" alt="Background Image 15">
 	 <img src="Webbilder-16.webp" id="bg16" alt="Background Image 16">
+	 <img src="Webbilder-17.webp" id="bg17" alt="Background Image 17">
+    	 <img src="Webbilder-18.webp" id="bg18" alt="Background Image 18">
+	 <img src="Webbilder-19.webp" id="bg19" alt="Background Image 19">
 
     </div>
 
@@ -131,61 +134,71 @@
     </footer>
 
     <script>
-        // JavaScript für die Hintergrundbildwechsel-Animation
-        const images = document.querySelectorAll('.background img');
-        let currentIndex = 0;
-        const initialDisplayTime = 9000; // Zeit, wie lange das erste Bild angezeigt wird, in Millisekunden
-        const displayTime = 12000; // Zeit, wie lange jedes der anderen Bilder angezeigt wird, in Millisekunden
-        const transitionTime = 3000; // Zeit für das Überblenden, in Millisekunden
+    // JavaScript für die Hintergrundbildwechsel-Animation
+    const images = document.querySelectorAll('.background img');
+    const firstImage = images[0]; // Das erste Bild bleibt immer das gleiche
+    let currentIndex = 0;
+    const initialDisplayTime = 9000; // Zeit, wie lange das erste Bild angezeigt wird, in Millisekunden
+    const displayTime = 12000; // Zeit, wie lange jedes der anderen Bilder angezeigt wird, in Millisekunden
+    const transitionTime = 3000; // Zeit für das Überblenden, in Millisekunden
 
-        function changeImage() {
-            // Entferne die 'active'-Klasse vom aktuellen Bild
-            images[currentIndex].classList.remove('active');
+    let shuffledImages = [...images].slice(1); // Kopiere die Liste der Bilder außer das erste
 
-            // Generiere eine Zufallszahl im Bereich 0 bis images.length - 1
-            let randomIndex;
+    // Funktion zum Mischen der Bilder (Fisher-Yates-Algorithmus)
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
 
-            // Stelle sicher, dass das nächste Bild nicht das gleiche ist wie das aktuelle
-            do {
-                randomIndex = Math.floor(Math.random() * images.length);
-            } while (randomIndex === currentIndex);
+    // Funktion zum Wechseln der Bilder
+    function changeImage() {
+        // Entferne die 'active'-Klasse vom aktuellen Bild
+        images[currentIndex].classList.remove('active');
 
-            // Setze den aktuellen Index auf die Zufallszahl
-            currentIndex = randomIndex;
-
-            // Füge die 'active'-Klasse zum zufälligen Bild hinzu
-            images[currentIndex].classList.add('active');
+        if (shuffledImages.length === 0) {
+            // Wenn alle Bilder gezeigt wurden, mische sie neu
+            shuffledImages = shuffle([...images].slice(1));
         }
 
-        function startImageTransition() {
-            images[currentIndex].classList.add('active'); // Zeigt das erste Bild an
-            // Nach initialDisplayTime wechseln wir das Bild und setzen das Intervall in Gang
-            setTimeout(() => {
-                changeImage(); // Startet den Bildwechsel nach der initialen Zeit
-                setInterval(() => {
-                    changeImage();
-                }, displayTime); // Regulärer Intervall für die anderen Bilder
-            }, initialDisplayTime);
-        }
+        // Setze das nächste Bild aus der zufälligen Reihenfolge
+        currentIndex = Array.prototype.indexOf.call(images, shuffledImages.shift());
 
-        // Startet den Bildwechsel
-        startImageTransition();
+        // Füge die 'active'-Klasse zum neuen Bild hinzu
+        images[currentIndex].classList.add('active');
+    }
 
-	// JavaScript für das Ausblenden des Bildes nach 30 Sekunden
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const companyImage = document.getElementById('company-image');
-                companyImage.style.transition = 'opacity 10s ease-out'; // Übergangszeit für das Ausblenden
-                companyImage.style.opacity = '0'; // Bild ausblenden
-            }, 30000); // 25 Sekunden Verzögerung
-        });
- 
+    function startImageTransition() {
+        firstImage.classList.add('active'); // Zeigt das erste Bild an
+        // Nach initialDisplayTime wechseln wir das Bild und setzen das Intervall in Gang
+        setTimeout(() => {
+            changeImage(); // Startet den Bildwechsel nach der initialen Zeit
+            setInterval(() => {
+                changeImage();
+            }, displayTime); // Regulärer Intervall für die anderen Bilder
+        }, initialDisplayTime);
+    }
 
-        // Mobile Weiterleitung
-        if (window.innerWidth <= 768) {
-            window.location.href = "Magazin.html"; // Weiterleitung der mobilen Geräte
-        }
-    </script>
+    // Startet den Bildwechsel
+    startImageTransition();
+
+    // JavaScript für das Ausblenden des Bildes nach 30 Sekunden
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const companyImage = document.getElementById('company-image');
+            companyImage.style.transition = 'opacity 10s ease-out'; // Übergangszeit für das Ausblenden
+            companyImage.style.opacity = '0'; // Bild ausblenden
+        }, 30000); // 30 Sekunden Verzögerung
+    });
+
+    // Mobile Weiterleitung
+    if (window.innerWidth <= 768) {
+        window.location.href = "Magazin.html"; // Weiterleitung der mobilen Geräte
+    }
+</script>
+
 </body>
 </html>
 
