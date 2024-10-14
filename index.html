@@ -8,83 +8,88 @@
     <meta name="description" content="Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet. Kontakt: info@weschnitz-blitz.de">
     <style>
         /* Allgemeine Stile */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Verhindert Scrollbalken */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-	/* Stil für das Bild in der oberen Mitte */
-	.company-image {
-    		position: absolute;
-    		top: 0; /* Direkt am oberen Rand */
-    		left: 50%; /* Horizontale Ausrichtung in der Mitte des Bildschirms */
-    		transform: translateX(-50%); /* Verschiebt das Bild um die Hälfte seiner Breite nach links, um es zu zentrieren */
-   		height: auto; /* Feste Höhe */
-   		width: 100%; /* Breite passt sich automatisch an */
-    		opacity: 0.92; /* Bild ist sofort sichtbar */
-    		transition: opacity 10s ease-in-out; /* Übergang für das Ausblenden */
-    		z-index: 10; /* Über anderen Inhalten */
-	}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Verhindert Scrollbalken */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        /* Stil für den Hintergrund mit Überblendung */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh; /* Vollbildhöhe */
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-            z-index: -1; /* Hintergrund-Bilder hinter anderen Inhalten */
-        }
+/* Stil für das Bild in der oberen Mitte */
+.company-image {
+    position: absolute;
+    top: 0; /* Direkt am oberen Rand */
+    left: 50%; /* Horizontale Ausrichtung in der Mitte des Bildschirms */
+    transform: translateX(-50%); /* Verschiebt das Bild um die Hälfte seiner Breite nach links, um es zu zentrieren */
+    height: auto; /* Feste Höhe */
+    width: 100%; /* Breite passt sich automatisch an */
+    opacity: 0.92; /* Bild ist sofort sichtbar */
+    transition: opacity 10s ease-in-out; /* Übergang für das Ausblenden */
+    z-index: 10; /* Über anderen Inhalten */
+}
 
-        .background img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 3s ease-in-out; /* Überblendungszeit */
-        }
+/* Stil für den Hintergrund mit Überblendung */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Vollbildhöhe */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1; /* Hintergrund-Bilder hinter anderen Inhalten */
+}
 
-        /* Sichtbares Bild */
-        .background img.active {
-            opacity: 1;
-        }
+/* Bildstil mit Zoom-Effekt */
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 3s ease-in-out, transform 18s ease-in-out; /* Zoom-Effekt hier hinzugefügt */
+    transform: scale(1); /* Standardgröße */
+}
 
-        /* Stil für die Fußzeile */
-        footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
+/* Sichtbares Bild mit Zoom-Effekt */
+.background img.active {
+    opacity: 1;
+    transform: scale(1.1); /* Zoom auf 110% */
+}
 
-        footer nav {
-            display: inline-block; /* Damit die Navigation nicht die gesamte Breite einnimmt */
-        }
+/* Stil für die Fußzeile */
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
 
-        footer nav a {
-            margin: 5px 8px; /* Abstand zwischen den Links */
-            text-decoration: none;
-            background-color: rgba(107, 132, 196, 0.8);
-            color: white;
-            padding: 5px 10px; /* Padding für den Kasten */
-            border-radius: 5px;
-            font-size: 20px; /* Schriftgröße */
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            white-space: nowrap;
-        }
+footer nav {
+    display: inline-block; /* Damit die Navigation nicht die gesamte Breite einnimmt */
+}
 
-        footer nav a:hover {
-            background-color: rgba(107, 132, 196, 1);
-        }
+footer nav a {
+    margin: 5px 8px; /* Abstand zwischen den Links */
+    text-decoration: none;
+    background-color: rgba(107, 132, 196, 0.8);
+    color: white;
+    padding: 5px 10px; /* Padding für den Kasten */
+    border-radius: 5px;
+    font-size: 20px; /* Schriftgröße */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+footer nav a:hover {
+    background-color: rgba(107, 132, 196, 1);
+}
+
     </style>
 </head>
 <body>
@@ -92,10 +97,9 @@
     <!-- Bild in der oberen linken Ecke -->
     <img src="Header.png" class="company-image" id="company-image" alt="Weschnitz-Blitz">
 
-
     <!-- Hintergrundbild und Überblendung -->
     <div class="background">
-   	 <img src="Webbilder-1.webp" class="active" id="bg1" alt="Background Image 1">
+    	 <img src="Webbilder-1.webp" id="bg1" alt="Background Image 1">
     	 <img src="Webbilder-2.webp" id="bg2" alt="Background Image 2">
     	 <img src="Webbilder-3.webp" id="bg3" alt="Background Image 3">
 	 <img src="Webbilder-4.webp" id="bg4" alt="Background Image 4">
@@ -114,9 +118,7 @@
 	 <img src="Webbilder-17.webp" id="bg17" alt="Background Image 17">
     	 <img src="Webbilder-18.webp" id="bg18" alt="Background Image 18">
 	 <img src="Webbilder-19.webp" id="bg19" alt="Background Image 19">
-
     </div>
-
 
     <!-- Fußzeile -->
     <footer>
@@ -136,13 +138,10 @@
     <script>
     // JavaScript für die Hintergrundbildwechsel-Animation
     const images = document.querySelectorAll('.background img');
-    const firstImage = images[0]; // Das erste Bild bleibt immer das gleiche
     let currentIndex = 0;
-    const initialDisplayTime = 9000; // Zeit, wie lange das erste Bild angezeigt wird, in Millisekunden
-    const displayTime = 12000; // Zeit, wie lange jedes der anderen Bilder angezeigt wird, in Millisekunden
+    const initialDisplayTime = 7000; // Zeit, wie lange das erste Bild angezeigt wird, in Millisekunden
+    const displayTime = 14500; // Zeit, wie lange jedes der anderen Bilder angezeigt wird, in Millisekunden
     const transitionTime = 3000; // Zeit für das Überblenden, in Millisekunden
-
-    let shuffledImages = [...images].slice(1); // Kopiere die Liste der Bilder außer das erste
 
     // Funktion zum Mischen der Bilder (Fisher-Yates-Algorithmus)
     function shuffle(array) {
@@ -153,6 +152,12 @@
         return array;
     }
 
+    let shuffledImages = shuffle([...images]); // Kopiere die Liste der Bilder und mische sie
+
+    // Wähle das erste zufällige Bild aus und zeige es sofort an
+    currentIndex = Array.prototype.indexOf.call(images, shuffledImages.shift());
+    images[currentIndex].classList.add('active'); // Das zufällige Bild wird angezeigt
+
     // Funktion zum Wechseln der Bilder
     function changeImage() {
         // Entferne die 'active'-Klasse vom aktuellen Bild
@@ -160,7 +165,7 @@
 
         if (shuffledImages.length === 0) {
             // Wenn alle Bilder gezeigt wurden, mische sie neu
-            shuffledImages = shuffle([...images].slice(1));
+            shuffledImages = shuffle([...images]);
         }
 
         // Setze das nächste Bild aus der zufälligen Reihenfolge
@@ -171,7 +176,6 @@
     }
 
     function startImageTransition() {
-        firstImage.classList.add('active'); // Zeigt das erste Bild an
         // Nach initialDisplayTime wechseln wir das Bild und setzen das Intervall in Gang
         setTimeout(() => {
             changeImage(); // Startet den Bildwechsel nach der initialen Zeit
@@ -181,7 +185,7 @@
         }, initialDisplayTime);
     }
 
-    // Startet den Bildwechsel
+    // Starte die Bildwechsel-Animation
     startImageTransition();
 
     // JavaScript für das Ausblenden des Bildes nach 30 Sekunden
@@ -195,11 +199,8 @@
 
     // Mobile Weiterleitung
     if (window.innerWidth <= 768) {
-        window.location.href = "Magazin.html"; // Weiterleitung der mobilen Geräte
+        window.location.href = "mobil.html";
     }
-</script>
-
+    </script>
 </body>
 </html>
-
-
