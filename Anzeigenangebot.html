@@ -5,127 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weschnitz-Blitz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <style>
-	h1 {
-    	 font-size: 28px;
-	}
-
-	h2 {
-   	 font-size: 24px;
-	}
-
-        /* Allgemeine Stile */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #E0F7FA; /*  rgba(217, 248, 248, 1.0) */
-            color: #333333; /* Alle Texte in Dunkelgrau */
-            /*font-size: 18px;  Grundschriftgröße */
-        }
-
-        /* Stil für das Desktop-Logo */
-        #logo {
-            width: 100%; /* Volle Breite für das Logo */
+        /* Bild auf Desktop zentrieren */
+        .imgdesktop {
             display: block;
+            margin: 20px auto;
+            width: 90%; /* Beispielgröße, kann angepasst werden */
         }
 
-        /* Stil für das mobile Logo */
-        #logo-mobile {
-            width: 100%; /* Volle Breite für das mobile Logo */
-            display: none; /* Standardmäßig ausblenden */
-        }
-        
-        /* Stil für die Navigation */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            margin: 2px 10px;
-            text-decoration: none;
-            background-color: rgba(107, 132, 196, 0.8);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease; /* Hintergrundfarbe Übergang */
-            display: inline-block;
-            white-space: nowrap; /* Verhindert Zeilenumbruch */
-        }
-        nav a:hover {
-            background-color: rgba(107, 132, 196, 1); /* Dunklere Hintergrundfarbe beim Überfahren */
+        /* Mobile Bilder standardmäßig ausblenden */
+        .imgmobil {
+            display: none;
         }
 
-        /* Stil für den Hauptinhalt */
-        .content {
-            padding: 20px;
-            text-align: left; /* Text links ausrichten */
-            max-width: 70%; /* Maximale Breite des Inhalts */
-            margin: 0 auto; /* Zentrierung des Inhalts */
-            font-size: 18px; /* Größere Schriftgröße für den Inhalt */
-        }
-	
-	/* Stil für die zentrierte .webp-Grafik */
-        .download-image {
-            display: block;
-            max-width: 70%;
-            width: 100%; /* Nimmt die volle Breite des Textbereichs ein */
-            height: auto; /* Höhe wird automatisch berechnet */
-            margin: 20px auto; /* Zentriere die Grafik und füge Abstand oben/unten hinzu */
-        }
-
-        .download-button-container {
-            display: flex;
-            justify-content: center; /* Zentriert die Buttons horizontal */
-            gap: 20px; /* Abstand zwischen den Buttons */
-            margin-top: 10px;
-        }
-
-        .download-button a {
-            display: inline-block; /* Buttons nebeneinander anzeigen */
-        }
-
-        .download-button img {
-            width: 250px; /* Breite des Bildes */
-            height: 50px; /* Höhe des Bildes */
-            border-radius: 5px; /* Etwas weniger runde Ecken */
-            transition: transform 0.3s ease; /* Animierter Hover-Effekt */
-        }
-
-        .download-button img:hover {
-            transform: scale(1.1); /* Vergrößern des Bildes beim Überfahren */
-        }
-
-        /* Stil für die Fußzeile */
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Media Queries für mobile Geräte */
-        @media screen and (max-width: 768px) {
-            /* Desktop-Logo ausblenden */
-            #logo {
+        /* Media Query für mobile Geräte */
+        @media (max-width: 768px) {
+            /* Desktop-Bild auf mobilen Geräten ausblenden */
+            .imgdesktop {
                 display: none;
             }
 
-            /* Mobile-Logo anzeigen */
-            #logo-mobile {
-                display: block;
-                margin: 0 auto; /* Zentriert das Bild horizontal */
+            /* Mobile Bilder auf mobilen Geräten einblenden und zentrieren */
+            .imgmobil {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Zentrieren */
+                gap: 30px; /* Abstand zwischen den Bildern */
+ 		padding: 30px 0; /* Abstand oben und unten für den gesamten Block */
             }
 
-            .content {
-                max-width: 90%; /* Breite des Inhalts für kleinere Bildschirme reduzieren */
-            }
-
-            nav a {
-                margin: 10px 0;
+            .imgmobil img {
+                width: 65%; /* Größe der mobilen Bilder anpassen */
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -150,36 +66,51 @@
 
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Anzeigenangebot</h1>
-        <div class="ut">
-            <p>Sie wollen für Ihr Unternehmen im Weschnitz-Blitz werben? Kontaktieren Sie uns einfach. <br>
-            Jakob Eisenhauer steht für Sie als Ansprechpartner gerne bereit!</p>
-            <p><strong>
-            E-Mail: jakob.eisenhauer@weschnitz-blitz.de<br> 
-            Telefon: Eine Terminvereinbarung ist jederzeit möglich.<br> </strong></p>
-            <br>
-            <p><strong><h2><center>Hier finden Sie unser Anzeigenangebot:</center></h2></strong></p>
+    <h1>Anzeigenangebot</h1>
+    <div class="ut">
+        <p>Sie wollen für Ihr Unternehmen im Weschnitz-Blitz werben? Kontaktieren Sie uns einfach. <br>
+        Jakob Eisenhauer steht für Sie als Ansprechpartner gerne bereit!</p>
+        <p><strong>
+        E-Mail: jakob.eisenhauer@weschnitz-blitz.de<br> 
+        Telefon: Eine Terminvereinbarung ist jederzeit möglich.<br> </strong></p>
+        <br>
+        <h2 style="text-align: center;">Hier finden Sie unser Anzeigenangebot:</h2>
 
-            <!-- .webp Grafik anstelle der Buttons -->
-            <img src="Angebotsübersicht.png" alt="Angebotsübersicht" class="download-image">
+        <!-- Desktop Bild -->
+        <img src="Angebotsübersicht.png" alt="Angebotsübersicht für Desktop" class="imgdesktop">
 
-           <p style="text-align: justify; line-height: 1.5;">
-   Alle hier aufgeführten Konditionen verstehen sich zuzüglich 19% Mehrwertsteuer. Der Werbebereich befindet sich am Ende des Magazins. Noch mehr Informationen zum Weschnitz-Blitz, zu den Erscheinungsterminen sowie weiteren Mediadaten finden Sie in unserer Angebotsübersicht:
-</p>
+   	<!-- Mobile Bilder (9 Stück) -->
+    	<div class="imgmobil">
+        	<img src="Ang0.png" alt="Angebot 0">
+        	<img src="Ang1.png" alt="Angebot 1">
+        	<img src="Ang2.png" alt="Angebot 2">
+        	<img src="Ang3.png" alt="Angebot 3">
+        	<img src="Ang4.png" alt="Angebot 4">
+        	<img src="Ang5.png" alt="Angebot 5">
+        	<img src="Ang6.png" alt="Angebot 6">
+        	<img src="Ang7.png" alt="Angebot 7">
+       		<img src="Ang8.png" alt="Angebot 8">
+    	</div>
+
+        <p style="text-align: justify; line-height: 1.5;">
+        Alle hier aufgeführten Konditionen verstehen sich zuzüglich 19% Mehrwertsteuer. Der Werbebereich befindet sich am Ende des Magazins. Noch mehr Informationen zum Weschnitz-Blitz, zu den Erscheinungsterminen sowie weiteren Mediadaten finden Sie in unserer Angebotsübersicht:
+        </p>
+    </div>
+</div>
 
 
-            <div class="download-button-container">
-                <div class="download-button">
-                    <a href="Angebotsübersicht-lokal.pdf">
-               		 <img src="Angebotsübersicht lokal.png" width="250px" height="auto" alt="Angebotsübersicht lokal">
-           	    </a>
-            	    <a href="Angebotsübersicht-2.pdf">
-                	 <img src="Angebotsübersicht überregional.png" width="250px" height="auto" alt="Angebotsübersicht überregional">
-                    </a>
 
-                </div>
-            </div>
+       <div class="download-button-container">
+	<center>
+        <div class="download-button">
+            <a href="Angebotsübersicht-lokal.pdf">
+                <img src="Angebotsübersicht lokal.png" width="250px" height="auto" alt="Angebotsübersicht lokal">
+            </a>
+            <a href="Angebotsübersicht-2.pdf">
+                <img src="Angebotsübersicht überregional.png" width="250px" height="auto" alt="Angebotsübersicht überregional">
+            </a>
         </div>
+	</center>
     </div>
 
     <!-- Fußzeile -->
