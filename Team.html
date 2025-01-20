@@ -47,16 +47,30 @@
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
         .team-member {
-            margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
-            display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
-            align-items: center; /* Vertikal zentrieren */
-        }
-        .team-member img {
-            width: 250px; /* Breite des Bildes */
-            height: auto; /* Automatische Höhe */
-            border-radius: 5px; /* Abgerundete Ecken für das Bild */
-            margin-right: 30px; /* Abstand zwischen Bild und Text */
-        }
+    		margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
+    		display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
+   		align-items: center; /* Vertikal zentrieren */
+	}
+
+	.team-member img.large {
+  		 width: 440px; /* Breite des größeren Bildes */
+   	 	 height: auto;
+   		 border-radius: 5px;
+  		 margin-left: 30px; /* Abstand zwischen Bild und Text */
+	}
+
+	/* Kleineres Bild */
+	.team-member img.small {
+   		 width: 200px; /* Breite des kleineren Bildes */
+    		 height: auto;
+   		 border-radius: 5px;
+   		 margin-right: 30px;
+	}
+	/* Flexbox für das große Bild und den Text */
+	.team-member.large-text {
+    		flex-direction: row-reverse; /* Bild nach rechts, Text links */
+	}
+
         .team-member-text {
             flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
             max-width: calc(100% - 280px); /* Maximale Breite des Textbereichs */
@@ -97,6 +111,16 @@
             line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
             text-align: justify; /* Blocksatz für den Text */
         }
+
+.quote {
+    font-style: italic; /* Kursiv für Zitate */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-align: right; /* Rechtsbündig */
+    color: #333; /* Dezenter Grauton */
+    margin-top: 20px; /* Abstand nach oben */
+    margin-bottom: 20px; /* Abstand nach unten */
+    padding-right: 10px; /* Etwas Abstand vom rechten Rand */
+}
 
 
 
@@ -159,31 +183,49 @@
     <!-- Hauptinhalt -->
     <div class="content">
         <h1>Unser Team</h1>
+
+<div class="team-member large-text">
+	<img class="large" src="Teamfoto.jpg" alt="Redaktionsfoto Weschnitz-Blitz">
+            <div class="team-member-text">
+	    <h2>Die Redaktion</h2>
+            <p>Alles begann im Jahr 2008, als Klaus und Cornelia Weber den Weschnitz-Blitz ins Leben riefen. Was als Projekt begann, ist heute ein etabliertes regionales Printmagazin. Als solches hat unser Team es 16 Jahre später bewusst übernommen. Unser Ziel ist es, durch qualitativ hochwertige journalistische und gestalterische Arbeit, der Vielfalt der Weschnitztals einen Raum zu geben und dabei ein attraktives, analoges Werbeumfeld für lokale Unternehmen zu sein. </p>
+		
+            </div>
+        </div>
         
         <div class="team-member">
-            <img src="Melena.jpg" alt="Melena">
+            <img class="small" src="Melena Schneider.jpg" alt="Melena Schneider">
             <div class="team-member-text">
                 <h2>Melena Schneider</h2>
-                <p>Melena Schneider ist 24 Jahre alt und in Mörlenbach aufgewachsen. Sie studiert derzeit an der Technischen Universität Berlin den Studiengang „Kultur und Technik“. Im Weschnitz-Blitz Team ist sie für die Textarbeit, Recherche sowie Organisation zuständig. „Ich freue mich sehr, mit vielen Menschen aus der Region ins Gespräch zu kommen und über Neuentdecktes sowie Altbekanntes im schönen Weschnitztal berichten zu dürfen.“</p>
+                <p>Melena Schneider ist 24 Jahre alt und in Mörlenbach aufgewachsen. Sie studiert derzeit an der Technischen Universität Berlin den Studiengang „Kultur und Technik“.</p>
+<p class="quote">„Ich freue mich jedes Mal, mit Menschen aus der Region ins Gespräch zu kommen und über Neuentdecktes sowie Altbekanntes im Weschnitztal berichten zu können.“</p>
+
             </div>
         </div>
 
         <div class="team-member">
-            <img src="Hanna.jpg" alt="Hanna">
-            <div class="team-member-text">
-                <h2>Hanna Felber</h2>
-                <p>Hanna Felber ist 25 Jahre alt und in Birkenau aufgewachsen. Im letzten Jahr hat sie ihr Studium der interkulturellen Betriebswirtschaftslehre mit dem Schwerpunkt Marketing und digitale Medien an der iba in Heidelberg abgeschlossen. Sie gestaltet das Layout und Design des Weschnitz-Blitz. „Ich freue mich, den Weschnitz-Blitz zusammen mit dem Team weiterzuentwickeln und den vielfältigen Themen der Region in unserem Magazin ein gut gestaltetes Umfeld zu bieten.“</p>
-            </div>
-        </div>
-
-        <div class="team-member">
-            <img src="Jakob.jpg" alt="Jakob">
+            <img class="small" src="Jakob Eisenhauer.jpg" alt="Jakob Eisenhauer">
             <div class="team-member-text">
                 <h2>Jakob Eisenhauer</h2>
-                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung als Bankkaufmann und studiert derzeit Physik an der Humboldt-Universität zu Berlin. Sein betriebswirtschaftliches Wissen sowie die Freude an Gestaltung und Fotografie bereichern unser Team. „Ich schätze das Weschnitztal für seine Natur und Menschen. In diesem Projekt sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
+                <p>Jakob Eisenhauer ist 24 Jahre alt und in Fürth aufgewachsen. Er hat eine abgeschlossene Ausbildung als Bankkaufmann und studiert derzeit Physik an der Humboldt-Universität zu Berlin.</p>
+<p class="quote">„Ich schätze das Weschnitztal für seine Natur und Menschen. Im Weschnitz-Blitz sehe ich die Chance, die Region nochmal mit anderen Augen kennenzulernen.“</p>
+
             </div>
         </div>
+    
+	 <div class="team-member">
+            <div class="team-member-text">
+                <h2>Freie Autoren und Autorinnen</h2>
+                <p>Für die Inhalte des Weschnitz-Blitz arbeiten wir regelmäßig mit Gastautorinnen und Gastautoren aus der Region auf Honorarbasis zusammen.  
+Du bist freier Journalist oder freie Journalistin und hast eine gute Themenidee, die zu uns passt?<br>  
+Dann schreib uns: <strong>info@weschnitz-blitz.de</strong></p>
+
+            </div>
+        </div>
+
+	
     </div>
+
     
     <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">
