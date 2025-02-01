@@ -85,7 +85,6 @@
             line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
             text-align: justify; /* Blocksatz für den Text */
         }
-
         /* Stil für die Fußzeile */
         footer {
             text-align: center;
@@ -102,6 +101,7 @@
             width: 100%; /* Volle Breite für das mobile Logo */
             display: none; /* Standardmäßig ausblenden */
         }
+
 .ut {
             flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
             max-width: calc(100%); /* Maximale Breite des Textbereichs */
@@ -112,6 +112,16 @@
             line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
             text-align: justify; /* Blocksatz für den Text */
         }
+
+.quote {
+    font-style: italic; /* Kursiv für Zitate */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-align: right; /* Rechtsbündig */
+    color: #333; /* Dezenter Grauton */
+    margin-top: 20px; /* Abstand nach oben */
+    margin-bottom: 20px; /* Abstand nach unten */
+    padding-right: 10px; /* Etwas Abstand vom rechten Rand */
+}
 
 
 
@@ -126,7 +136,7 @@
             nav a {
                 margin: 10px 0;
             }
-             .team-member {
+            .team-member {
                 display: block; /* Bild und Text untereinander anzeigen */
             }
             .team-member img {
@@ -136,20 +146,20 @@
             }
 	    .team-member-text p {
       		text-align: left; /* Linksbündig auf kleineren Bildschirmen */
-            }
+    	}
 	    .team-member img.large {
                 width: 100%; /* Fülle den verfügbaren Platz auf Mobilgeräten */
         	max-width: 100%; /* Sicherstellen, dass es nicht die Breite des Containers überschreitet */
         	margin-left: 0; /* Entferne linken Abstand für zentriertes Layout */
-  	    }
-
-            .ut {
+  	  }
+	   .ut {
              text-align: left; /* Maximale Breite des Textbereichs */
        	    }
 
 	    .ut p {
              text-align: left;
       	    }
+
               #logo {
                 display: none;
             }
@@ -159,8 +169,11 @@
                 display: block;
                 margin: 0 auto; /* Zentriert das Bild horizontal */
             }
-            
-        }
+            }
+            .team-member-text {
+                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
+            }
+	   }
     </style>
 </head>
 <body>
@@ -186,19 +199,19 @@
     
     <!-- Hauptinhalt -->
     <div class="content">
-        <h1>Unser Konzept</h1>  
+        <h1>Unser Team</h1>
 
 <div class="team-member large-text">
 	<img class="large" src="Karte Weschnitztal.png" alt="Karte Weschnitztal">
             <div class="team-member-text">
-        <p><strong>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet.</strong> Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahmen wir, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins.</p>
-
-        <p><strong>Der Weschnitz-Blitz soll nachhaltig konzipiert sein.</strong> Nachhaltigkeit - Das hört man häufig. Wir möchten daher gerne genauer erklären, was wir darunter verstehen. Für unser Konzept lässt sich Nachhaltigkeit grob in drei Bereiche unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit.</p>
-
-     </div>
-</div>
-
-<div class="ut" style="margin-top: 20px;">
+	    <p><strong>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet.</strong> Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahmen wir, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins. <br>
+<br>
+<strong>Der Weschnitz-Blitz soll nachhaltig konzipiert sein.</strong> Nachhaltigkeit - Das hört man häufig. Wir möchten daher gerne genauer erklären, was wir darunter verstehen. Für unser Konzept lässt sich Nachhaltigkeit grob in drei Bereiche unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit.</p>
+	
+            </div>
+        </div>
+        
+        <div class="ut" style="margin-top: 20px;">
 
 <p>Der Bereich der <strong>sozialen Nachhaltigkeit</strong> zeigt sich in unserem Projekt darin, dass wir die vielfältigen Beiträge herausstellen wollen, die Menschen hier in der Region zum gesellschaftlichen Zusammenleben und für das kulturelle Angebot des Weschnitztals leisten. Dabei ist es uns wichtig, dass unsere Inhalte für alle verfügbar sind: Der Weschnitz-Blitz liegt kostenlos an über 50 Abholstellen im Weschnitztal aus. Darüber hinaus besteht die Möglichkeit, ihn per Post im Abonnement zu erhalten oder auf dieser Homepage kostenfrei als Digitalversion herunterzuladen.</p>
 
@@ -208,7 +221,8 @@
 <p> Durch die Wahl von FSC- zertifiziertem ungestrichenem Naturpapier und der durch uns geförderten Werbung für Inhalte mit ökologischem Anspruch, gehen wir schließlich auch erste Schritte im Bereich der <strong>ökologischen Nachhaltigkeit</strong>. Eines unserer Ziele für das Jahr 2025 ist es zudem, einen regionalen Druckpartner zu finden, durch welchen Lieferwege verkürzt und ein regional ansässiges Druckunternehmen unterstützt werden soll.
 </p>
 </div>
-              
+
+    
     <!-- Fußzeile -->
 <footer style="text-align: center; margin-top: 20px;">
     <!-- Button-Stil wie in der Navigation -->
