@@ -48,30 +48,44 @@
             margin: 0 auto; /* Zentrierung des Inhalts */
         }
         .team-member {
-            margin-bottom: 0px; /* Abstand zwischen den Teammitgliedern */
-            display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
-            align-items: center; /* Vertikal zentrieren */
-        }
-        .team-member img {
-            width: 250px; /* Breite des Bildes */
-            height: auto; /* Automatische Höhe */
-            border-radius: 2px; /* Abgerundete Ecken für das Bild */
-            margin-right: 40px; /* Abstand zwischen Bild und Text */
-	    
-        }
+    		margin-bottom: 40px; /* Abstand zwischen den Teammitgliedern */
+    		display: flex; /* Flexbox für die horizontale Anordnung von Bild und Text */
+   		align-items: center; /* Vertikal zentrieren */
+	}
+
+	.team-member img.large {
+  		 width: 440px; /* Breite des größeren Bildes */
+   	 	 height: auto;
+   		 border-radius: 5px;
+  		 margin-left: 30px; /* Abstand zwischen Bild und Text */
+	}
+
+	/* Kleineres Bild */
+	.team-member img.small {
+   		 width: 200px; /* Breite des kleineren Bildes */
+    		 height: auto;
+   		 border-radius: 5px;
+   		 margin-right: 30px;
+	}
+	/* Flexbox für das große Bild und den Text */
+	.team-member.large-text {
+    		flex-direction: row-reverse; /* Bild nach rechts, Text links */
+	}
+
         .team-member-text {
             flex-grow: 1; /* Der Text soll so viel Platz wie möglich einnehmen */
             max-width: calc(100% - 280px); /* Maximale Breite des Textbereichs */
         }
         .team-member-text h2 {
             font-size: 24px; /* Größere Schriftgröße für die Überschrift */
-            margin-bottom: 20px; /* Abstand nach unten */
+            margin-bottom: 10px; /* Abstand nach unten */
         }
         .team-member-text p {
             font-size: 18px; /* Größere Schriftgröße für den Text */
             line-height: 1.6; /* Zeilenhöhe für verbesserte Lesbarkeit */
             text-align: justify; /* Blocksatz für den Text */
         }
+
         /* Stil für die Fußzeile */
         footer {
             text-align: center;
@@ -112,7 +126,7 @@
             nav a {
                 margin: 10px 0;
             }
-            .team-member {
+             .team-member {
                 display: block; /* Bild und Text untereinander anzeigen */
             }
             .team-member img {
@@ -120,18 +134,20 @@
                 margin-right: 0; /* Abstand zwischen Bild und Text entfernen */
                 margin-bottom: 15px; /* Abstand unter dem Bild hinzufügen */
             }
+	    .team-member-text p {
+      		text-align: left; /* Linksbündig auf kleineren Bildschirmen */
+            }
+	    .team-member img.large {
+                width: 100%; /* Fülle den verfügbaren Platz auf Mobilgeräten */
+        	max-width: 100%; /* Sicherstellen, dass es nicht die Breite des Containers überschreitet */
+        	margin-left: 0; /* Entferne linken Abstand für zentriertes Layout */
+  	    }
+
             .ut {
              text-align: left; /* Maximale Breite des Textbereichs */
        	    }
 
 	    .ut p {
-             text-align: left;
-      	    }
-            .team-member-text {
-             text-align: left; /* Maximale Breite des Textbereichs */
-       	    }
-
-	    .team-member-text p {
              text-align: left;
       	    }
               #logo {
@@ -143,10 +159,7 @@
                 display: block;
                 margin: 0 auto; /* Zentriert das Bild horizontal */
             }
-            }
-            .team-member-text {
-                max-width: calc(100% - 20px); /* Textbreite entsprechend der Bildbreite */
-            }
+            
         }
     </style>
 </head>
@@ -175,17 +188,12 @@
     <div class="content">
         <h1>Unser Konzept</h1>  
 
-<div class="team-member" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-    <img src="Karte Weschnitztal.png" alt="Karte Weschnitztal" style="width: 50%; height: auto; margin-left: 20px;">
-    
-    <div class="team-member-text">
-        <p><strong>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet.</strong> 
-        Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, 
-        die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahmen wir, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins.</p>
+<div class="team-member large-text">
+	<img class="large" src="Karte Weschnitztal.png" alt="Karte Weschnitztal">
+            <div class="team-member-text">
+        <p><strong>Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet.</strong> Als solches hat es bereits eine lange Geschichte. Urheber und Urheberin dieses Projekts sind Klaus und Cornelia Weber, die dieses im Jahr 2008 ins Leben riefen. 16 Jahre später, im April 2024, übernahmen wir, Jakob Eisenhauer und Melena Schneider, die Leitung des Magazins.</p>
 
-        <p><strong>Der Weschnitz-Blitz soll nachhaltig konzipiert sein.</strong> Nachhaltigkeit - Das hört man häufig. Wir möchten 
-        daher gerne genauer erklären, was wir darunter verstehen. Für unser Konzept lässt sich Nachhaltigkeit grob in drei Bereiche 
-        unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit.</p>
+        <p><strong>Der Weschnitz-Blitz soll nachhaltig konzipiert sein.</strong> Nachhaltigkeit - Das hört man häufig. Wir möchten daher gerne genauer erklären, was wir darunter verstehen. Für unser Konzept lässt sich Nachhaltigkeit grob in drei Bereiche unterteilen: Soziale, wirtschaftliche und ökologische Nachhaltigkeit.</p>
 
      </div>
 </div>
