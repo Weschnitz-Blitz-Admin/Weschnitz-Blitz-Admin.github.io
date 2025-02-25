@@ -9,7 +9,10 @@
 
     <style>
         /* Bild auf Desktop zentrieren */
-        .imgdesktop {
+        .mobile-only {
+	    display: none;
+	}
+	.imgdesktop {
             display: block;
             margin: 20px auto;
             width: 100%; /* Beispielgröße, kann angepasst werden */
@@ -29,6 +32,9 @@
 	    .desktop-only {
      	        display: none;
 	    }
+	    .mobile-only {
+       	     display: block;
+    	    }
 	    .ut {
              text-align: left; /* Maximale Breite des Textbereichs */
        	    }
@@ -99,16 +105,31 @@ Alle hier aufgeführten Konditionen verstehen sich zuzüglich 19% Umsatzsteuer. 
 </div>
 
 
-
-       <div class="download-button-container">
-	<center>
+      <div class="download-button-container" style="text-align: center;">
+    <!-- Desktop-Version -->
+    <div class="desktop-only">
         <div class="download-button">
             <a href="Mediadaten Weschnitz-Blitz 2025.pdf">
                 <img src="Mediadaten 2025 Weschnitz Blitz.jpg" width="40%" height="auto" alt="Mediadaten 2025 Weschnitz Blitz">
             </a>
-         </div>
-	</center>
+        </div>
+        <div class="download-button">
+            <a href="Mediadaten Weschnitz-Blitz 2025.pdf">
+                <img id="logo-mobile" src="Mediadaten 2025 Weschnitz Blitz.jpg" alt="Mediadaten Weschnitz-Blitz 2025">
+            </a>
+        </div>
     </div>
+
+    <!-- Mobile-Version -->
+    <div class="mobile-only">
+        <div class="download-button">
+            <a href="Mediadaten Weschnitz-Blitz 2025.pdf">
+                <img src="Mediadaten 2025 Weschnitz Blitz.jpg" width="80%" height="auto" alt="Mediadaten 2025 Weschnitz Blitz">
+            </a>
+        </div>
+    </div>
+</div>
+
 
     <!-- Fußzeile -->
     <footer style="text-align: center; margin-top: 60px;">
