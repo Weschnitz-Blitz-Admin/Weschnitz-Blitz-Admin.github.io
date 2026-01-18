@@ -7,39 +7,40 @@
     <title>Weschnitz-Blitz</title>
     <meta name="description" content="Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet. Kontakt: info@weschnitz-blitz.de">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="4d0dface-7992-4a78-81e8-9d9c948afc80"></script>
+
     <style>
-        /* Allgemeine Stile */
+/* Allgemeine Stile */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Verhindert Scrollbalken */
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Stil für das Bild in der oberen Mitte */
 .company-image {
     position: absolute;
-    top: 0; /* Direkt am oberen Rand */
-    left: 50%; /* Horizontale Ausrichtung in der Mitte des Bildschirms */
-    transform: translateX(-50%); /* Verschiebt das Bild um die Hälfte seiner Breite nach links, um es zu zentrieren */
-    height: auto; /* Feste Höhe */
-    width: 100%; /* Breite passt sich automatisch an */
-    opacity: 0.92; /* Bild ist sofort sichtbar */
-    transition: opacity 10s ease-in-out; /* Übergang für das Ausblenden */
-    z-index: 10; /* Über anderen Inhalten */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 100%;
+    opacity: 0.92;
+    transition: opacity 10s ease-in-out;
+    z-index: 10;
 }
 
-/* Stil für den Hintergrund mit Überblendung */
+/* Hintergrundcontainer */
 .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Vollbildhöhe */
+    height: 100vh;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    z-index: -1; /* Hintergrund-Bilder hinter anderen Inhalten */
+    z-index: -1;
 }
 
 /* Bildstil mit Zoom-Effekt */
@@ -51,17 +52,17 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 3s ease-in-out, transform 18s ease-in-out; /* Zoom-Effekt hier hinzugefügt */
-    transform: scale(1); /* Standardgröße */
+    transform: scale(1);
+    transition: opacity 3s ease-in-out, transform 18s ease-in-out;
 }
 
-/* Sichtbares Bild mit Zoom-Effekt */
+/* Sichtbares Bild */
 .background img.active {
     opacity: 1;
-    transform: scale(1.1); /* Zoom auf 110% */
+    transform: scale(1.1);
 }
 
-/* Stil für die Fußzeile */
+/* Fußzeile */
 footer {
     position: absolute;
     bottom: 20px;
@@ -70,17 +71,17 @@ footer {
 }
 
 footer nav {
-    display: inline-block; /* Damit die Navigation nicht die gesamte Breite einnimmt */
+    display: inline-block;
 }
 
 footer nav a {
-    margin: 5px 8px; /* Abstand zwischen den Links */
+    margin: 5px 8px;
     text-decoration: none;
     background-color: rgba(107, 132, 196, 0.8);
     color: white;
-    padding: 5px 10px; /* Padding für den Kasten */
+    padding: 5px 10px;
     border-radius: 5px;
-    font-size: 20px; /* Schriftgröße */
+    font-size: 20px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     display: inline-block;
@@ -90,55 +91,14 @@ footer nav a {
 footer nav a:hover {
     background-color: rgba(107, 132, 196, 1);
 }
-
     </style>
 </head>
+
 <body>
-	
-    <!-- Bild in der oberen linken Ecke -->
     <img src="Header.png" class="company-image" id="company-image" alt="Weschnitz-Blitz">
+    <div class="background"></div>
 
-    <!-- Hintergrundbild und Überblendung -->
-    <div class="background">
-    	 <img src="Webbilder-1.webp" id="bg1" alt="Background Image 1">
-    	 <img src="Webbilder-2.webp" id="bg2" alt="Background Image 2">
-    	 <img src="Webbilder-3.webp" id="bg3" alt="Background Image 3">
-	 <img src="Webbilder-4.webp" id="bg4" alt="Background Image 4">
-    	 <img src="Webbilder-5.webp" id="bg5" alt="Background Image 5">
-	 <img src="Webbilder-6.webp" id="bg6" alt="Background Image 6">
-    	 <img src="Webbilder-7.webp" id="bg7" alt="Background Image 7">
-	 <img src="Webbilder-8.webp" id="bg8" alt="Background Image 8">
-    	 <img src="Webbilder-9.webp" id="bg9" alt="Background Image 9">
-	 <img src="Webbilder-10.webp" id="bg10" alt="Background Image 10">
-    	 <img src="Webbilder-11.webp" id="bg11" alt="Background Image 11">
-	 <img src="Webbilder-12.webp" id="bg12" alt="Background Image 12">
-    	 <img src="Webbilder-13.webp" id="bg13" alt="Background Image 13">
-	 <img src="Webbilder-14.webp" id="bg14" alt="Background Image 14">
-    	 <img src="Webbilder-15.webp" id="bg15" alt="Background Image 15">
-	 <img src="Webbilder-16.webp" id="bg16" alt="Background Image 16">
-	 <img src="Webbilder-17.webp" id="bg17" alt="Background Image 17">
-    	 <img src="Webbilder-18.webp" id="bg18" alt="Background Image 18">
-	 <img src="Webbilder-19.webp" id="bg19" alt="Background Image 19">
-	 <img src="Webbilder-20.webp" id="bg20" alt="Background Image 20">
-	 <img src="Webbilder-21.webp" id="bg21" alt="Background Image 21">
-	 <img src="Webbilder-22.webp" id="bg22" alt="Background Image 22">
-    	 <img src="Webbilder-23.webp" id="bg23" alt="Background Image 23">
-	 <img src="Webbilder-24.webp" id="bg24" alt="Background Image 24">
-	 <img src="Webbilder-25.webp" id="bg25" alt="Background Image 25">
-	 <img src="Webbilder-26.webp" id="bg26" alt="Background Image 26">
-	 <img src="Webbilder-27.webp" id="bg27" alt="Background Image 27">
-    	 <img src="Webbilder-28.webp" id="bg28" alt="Background Image 28">
-	 <img src="Webbilder-29.webp" id="bg29" alt="Background Image 29">
-	 <img src="Webbilder-30.webp" id="bg30" alt="Background Image 30">
-	 <img src="Webbilder-31.webp" id="bg31" alt="Background Image 31">
-	 <img src="Webbilder-32.webp" id="bg32" alt="Background Image 32">
-    	 <img src="Webbilder-33.webp" id="bg33" alt="Background Image 33">
-	 <img src="Webbilder-34.webp" id="bg34" alt="Background Image 34">
-    </div>
-
-    <!-- Fußzeile -->
     <footer>
-        <!-- Navigation -->
         <nav>
             <a href="Konzept.html">Unser Konzept</a>
             <a href="Magazin.html">Aktuelles Magazin</a>
@@ -152,14 +112,17 @@ footer nav a:hover {
     </footer>
 
     <script>
-    // JavaScript für die Hintergrundbildwechsel-Animation
-    const images = document.querySelectorAll('.background img');
-    let currentIndex = 0;
-    const initialDisplayTime = 2000; // Zeit, wie lange das erste Bild angezeigt wird, in Millisekunden
-    const displayTime = 14500; // Zeit, wie lange jedes der anderen Bilder angezeigt wird, in Millisekunden
-    const transitionTime = 3000; // Zeit für das Überblenden, in Millisekunden
+    const imageSources = [
+        "Webbilder-1.webp","Webbilder-2.webp","Webbilder-3.webp","Webbilder-4.webp","Webbilder-5.webp",
+        "Webbilder-6.webp","Webbilder-7.webp","Webbilder-8.webp","Webbilder-9.webp","Webbilder-10.webp",
+        "Webbilder-11.webp","Webbilder-12.webp","Webbilder-13.webp","Webbilder-14.webp","Webbilder-15.webp",
+        "Webbilder-16.webp","Webbilder-17.webp","Webbilder-18.webp","Webbilder-19.webp","Webbilder-20.webp",
+        "Webbilder-21.webp","Webbilder-22.webp","Webbilder-23.webp","Webbilder-24.webp","Webbilder-25.webp",
+        "Webbilder-26.webp","Webbilder-27.webp","Webbilder-28.webp","Webbilder-29.webp","Webbilder-30.webp",
+        "Webbilder-31.webp","Webbilder-32.webp","Webbilder-33.webp","Webbilder-34.webp"
+    ];
 
-    // Funktion zum Mischen der Bilder (Fisher-Yates-Algorithmus)
+    // Fisher-Yates Shuffle
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -168,55 +131,72 @@ footer nav a:hover {
         return array;
     }
 
-    let shuffledImages = shuffle([...images]); // Kopiere die Liste der Bilder und mische sie
+    const shuffledSources = shuffle([...imageSources]);
+    const background = document.querySelector('.background');
+    let currentIndex = 0;
 
-    // Wähle das erste zufällige Bild aus und zeige es sofort an
-    currentIndex = Array.prototype.indexOf.call(images, shuffledImages.shift());
-    images[currentIndex].classList.add('active'); // Das zufällige Bild wird angezeigt
+    // Show first image
+    let currentImg = document.createElement('img');
+    currentImg.src = shuffledSources[currentIndex];
+    currentImg.classList.add('active');
+    background.appendChild(currentImg);
 
-    // Funktion zum Wechseln der Bilder
+    // Function to preload an image
+    function preloadImage(index) {
+        const img = new Image();
+        img.src = shuffledSources[index];
+    }
+
+    // Preload next 2 images
+    preloadImage(1);
+    preloadImage(2);
+
     function changeImage() {
-        // Entferne die 'active'-Klasse vom aktuellen Bild
-        images[currentIndex].classList.remove('active');
+        const nextIndex = (currentIndex + 1) % shuffledSources.length;
 
-        if (shuffledImages.length === 0) {
-            // Wenn alle Bilder gezeigt wurden, mische sie neu
-            shuffledImages = shuffle([...images]);
-        }
+        // Preload the image after the next one
+        preloadImage((nextIndex + 1) % shuffledSources.length);
 
-        // Setze das nächste Bild aus der zufälligen Reihenfolge
-        currentIndex = Array.prototype.indexOf.call(images, shuffledImages.shift());
+        const nextImg = new Image();
+        nextImg.src = shuffledSources[nextIndex];
+        background.appendChild(nextImg);
 
-        // Füge die 'active'-Klasse zum neuen Bild hinzu
-        images[currentIndex].classList.add('active');
-    }
-
-    function startImageTransition() {
-        // Nach initialDisplayTime wechseln wir das Bild und setzen das Intervall in Gang
         setTimeout(() => {
-            changeImage(); // Startet den Bildwechsel nach der initialen Zeit
-            setInterval(() => {
-                changeImage();
-            }, displayTime); // Regulärer Intervall für die anderen Bilder
-        }, initialDisplayTime);
+            currentImg.classList.remove('active');
+            nextImg.classList.add('active');
+        }, 50);
+
+        setTimeout(() => {
+            background.removeChild(currentImg);
+            currentImg = nextImg;
+            currentIndex = nextIndex;
+        }, 3000);
     }
 
-    // Starte die Bildwechsel-Animation
-    startImageTransition();
+    // Timing settings
+    const initialDisplayTime = 2000;
+    const displayTime = 14500;
 
-    // JavaScript für das Ausblenden des Bildes nach 30 Sekunden
+    // Start slideshow
+    setTimeout(() => {
+        changeImage();
+        setInterval(changeImage, displayTime);
+    }, initialDisplayTime);
+
+    // Fade out header after 30 seconds
     window.addEventListener('load', () => {
         setTimeout(() => {
             const companyImage = document.getElementById('company-image');
-            companyImage.style.transition = 'opacity 10s ease-out'; // Übergangszeit für das Ausblenden
-            companyImage.style.opacity = '0'; // Bild ausblenden
-        }, 30000); // 30 Sekunden Verzögerung
+            companyImage.style.transition = 'opacity 10s ease-out';
+            companyImage.style.opacity = '0';
+        }, 30000);
     });
 
-    // Mobile Weiterleitung
+    // Redirect mobile users
     if (window.innerWidth <= 768) {
         window.location.href = "Magazin.html";
     }
     </script>
 </body>
 </html>
+
