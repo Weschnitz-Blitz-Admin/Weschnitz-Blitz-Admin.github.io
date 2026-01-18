@@ -122,7 +122,7 @@ footer nav a:hover {
         "Webbilder-31.webp","Webbilder-32.webp","Webbilder-33.webp","Webbilder-34.webp"
     ];
 
-    // Fisher-Yates Shuffle
+    // Randomize the order once per page load
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -134,56 +134,63 @@ footer nav a:hover {
     const shuffledSources = shuffle([...imageSources]);
     const background = document.querySelector('.background');
     let currentIndex = 0;
+    let preloadedImages = [];
 
-    // Show first image
-    let currentImg = document.createElement('img');
-    currentImg.src = shuffledSources[currentIndex];
-    currentImg.classList.add('active');
-    background.appendChild(currentImg);
+    // Show first image immediately
+    const firstImg = new Image();
+    firstImg.src = shuffledSources[currentIndex];
+    firstImg.classList.add('active');
+    firstImg.onload = () => background.appendChild(firstImg);
+    preloadedImages.push(firstImg);
 
-    // Function to preload an image
-    function preloadImage(index) {
+    // Progressive preloader – loads one image at a time in display order
+    function preloadSequentially(index) {
+        if (index >= shuffledSources.length) return;
         const img = new Image();
         img.src = shuffledSources[index];
+        preloadedImages[index] = img;
+        img.onload = () => {
+            // Once loaded, start loading the next one
+            preloadSequentially(index + 1);
+        };
     }
 
-    // Preload next 2 images
-    preloadImage(1);
-    preloadImage(2);
+    // Start preloading starting from the 2nd image
+    preloadSequentially(1);
 
     function changeImage() {
         const nextIndex = (currentIndex + 1) % shuffledSources.length;
+        const nextImg = preloadedImages[nextIndex];
 
-        // Preload the image after the next one
-        preloadImage((nextIndex + 1) % shuffledSources.length);
+        // If for some reason it's not ready, skip until loaded
+        if (!nextImg || !nextImg.complete) {
+            // Try again in a short moment
+            setTimeout(changeImage, 1000);
+            return;
+        }
 
-        const nextImg = new Image();
-        nextImg.src = shuffledSources[nextIndex];
         background.appendChild(nextImg);
 
         setTimeout(() => {
-            currentImg.classList.remove('active');
+            preloadedImages[currentIndex].classList.remove('active');
             nextImg.classList.add('active');
         }, 50);
 
         setTimeout(() => {
-            background.removeChild(currentImg);
-            currentImg = nextImg;
+            background.removeChild(preloadedImages[currentIndex]);
             currentIndex = nextIndex;
         }, 3000);
     }
 
-    // Timing settings
     const initialDisplayTime = 2000;
     const displayTime = 14500;
 
-    // Start slideshow
     setTimeout(() => {
         changeImage();
         setInterval(changeImage, displayTime);
     }, initialDisplayTime);
 
-    // Fade out header after 30 seconds
+    // Fade out header after 30s
     window.addEventListener('load', () => {
         setTimeout(() => {
             const companyImage = document.getElementById('company-image');
