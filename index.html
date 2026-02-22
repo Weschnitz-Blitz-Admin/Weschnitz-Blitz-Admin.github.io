@@ -1,247 +1,382 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weschnitz-Blitz</title>
-    <meta name="description" content="Der Weschnitz-Blitz ist ein regionales Magazin, das sich dem kulturellen Leben des Weschnitztals widmet. Kontakt: info@weschnitz-blitz.de">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="4d0dface-7992-4a78-81e8-9d9c948afc80"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weschnitz-Blitz</title>
+<meta name="description" content="Der Weschnitz-Blitz ist das regionale Magazin für das kulturelle Leben im Weschnitztal. Aktuelle Ausgabe und Anzeigenangebote.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <style>
-/* Allgemeine Stile */
+<style>
+:root {
+    --primary: rgba(107,132,196,1);
+    --primary-soft: rgba(107,132,196,0.85);
+    --dark: #1e2a44;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    background: #f4f6fb;
+    line-height: 1.6;
 }
 
-/* Stil für das Bild in der oberen Mitte */
-.company-image {
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url("Landing.webp") center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::after {
+    content: "";
     position: absolute;
-    top: 0;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.brand {
+    font-size: 4.0rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 28px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary-soft);
+}
+
+/* Scroll Indicator */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    height: auto;
-    width: 100%;
-    opacity: 0.92;
-    transition: opacity 10s ease-in-out;
-    z-index: 10;
+    font-size: 28px;
+    animation: bounce 2s infinite;
+    opacity: 0.9;
 }
 
-/* Hintergrundcontainer */
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }
 }
 
-/* Bildstil mit Zoom-Effekt */
-.background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transform: scale(1);
-    transition: opacity 3s ease-in-out, transform 18s ease-in-out;
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* Sichtbares Bild */
-.background img.active {
-    opacity: 1;
-    transform: scale(1.1);
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
 }
 
-/* Fußzeile */
-footer {
-    position: absolute;
-    bottom: 20px;
+/* Aktuelle Ausgabe */
+
+.issue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.issue img {
+    max-width: 280px;
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.issue-text {
+    max-width: 500px;
+}
+
+/* Anzeigen */
+
+.ads-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     text-align: center;
 }
 
-footer nav {
-    display: inline-block;
+.ads-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
-footer nav a {
-    margin: 5px 8px;
-    text-decoration: none;
-    background-color: rgba(107, 132, 196, 0.8);
+.ads-box li {
+    margin: 10px 0;
+}
+
+/* Galerie */
+
+.gallery-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 850px;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 8px;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+.gallery-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery-controls button {
+    background: var(--primary);
+    border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 8px 14px;
+    margin: 0 5px;
     border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    white-space: nowrap;
+    cursor: pointer;
 }
 
-footer nav a:hover {
-    background-color: rgba(107, 132, 196, 1);
+.gallery-controls button:hover {
+    background: var(--primary-soft);
 }
-    </style>
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--primary);
+}
+
+footer a {
+    color: white;
+    margin: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive */
+
+@media(max-width: 768px){
+
+.hero {
+    min-height: 500px;
+}
+
+.brand {
+    font-size: 2.1rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+}
+
+.issue {
+    flex-direction: column;
+    text-align: center;
+}
+
+.gallery-wrapper {
+    max-width: 95%;
+}
+}
+</style>
 </head>
 
 <body>
-    <img src="Header.png" class="company-image" id="company-image" alt="Weschnitz-Blitz">
-    <div class="background"></div>
 
-    <footer>
-        <nav>
-            <a href="Konzept.html">Unser Konzept</a>
-            <a href="Magazin.html">Aktuelles Magazin</a>
-            <a href="Archiv.html">Archiv</a>
-            <a href="Kontakt.html">Kontakt</a>
-            <a href="Anzeigenangebot.html">Anzeigenangebot</a>
-            <a href="Auslagestellen.html">Auslagestellen</a>
-            <a href="Team.html">Unser Team</a>
-            <a href="Impressum.html">Impressum</a>
-        </nav>
-    </footer>
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="brand">Weschnitz-Blitz</div>
+        <div class="tagline">Das Magazin fürs Weschnitztal und die Region</div>
+        <a href="Magazin.html" class="btn">Aktuelle Ausgabe lesen</a>
+        <a href="Anzeigenangebot.html" class="btn">Anzeige schalten</a>
+    </div>
+    <div class="scroll-indicator">↓</div>
+</header>
 
-    <script>
-    const imageSources = [
-        //"Webbilder-1.webp",
-        //"Webbilder-2.webp",
-        //"Webbilder-3.webp",
-        "Webbilder-4.webp",
-        "Webbilder-5.webp",
-        //"Webbilder-6.webp",
-        //"Webbilder-7.webp",
-        //"Webbilder-8.webp",
-        //"Webbilder-9.webp",
-       // "Webbilder-10.webp",
-       // "Webbilder-11.webp",
-        "Webbilder-12.webp",
-        "Webbilder-13.webp",
-       // "Webbilder-14.webp",
-       // "Webbilder-15.webp",
-       // "Webbilder-16.webp",
-       // "Webbilder-17.webp",
-       // "Webbilder-18.webp",
-       // "Webbilder-19.webp",
-        "Webbilder-20.webp",
-        "Webbilder-21.webp",
-        "Webbilder-22.webp",
-        "Webbilder-23.webp",
-        //"Webbilder-24.webp",
-        "Webbilder-25.webp",
-        //"Webbilder-26.webp",
-        "Webbilder-27.webp",
-        "Webbilder-28.webp",
-        //"Webbilder-29.webp",
-        //"Webbilder-30.webp",
-        "Webbilder-31.webp",
-       // "Webbilder-32.webp",
-        "Webbilder-33.webp",
-       // "Webbilder-34.webp"
-    ];
+<!-- AKTUELLE AUSGABE -->
+<section>
+    <h2 class="section-title">Aktuelle Ausgabe</h2>
+    <div class="issue">
+        <img src="https://weschnitz-blitz.de/Archiv-161-200/Cover Weschnitz Blitz 191.jpg" alt="Aktuelle Ausgabe">
+        <div class="issue-text">
+            <p>Entdecken Sie aktuelle Veranstaltungen und Angebote aus der Region und lassen Sie sich von unseren redaktionellen Highlights begeistern.</p>
+            <a href="Magazin.html" class="btn">Jetzt lesen</a>
+        </div>
+    </div>
+</section>
 
-    //const imageSources = [
-      //  "Webbilder-1.webp","Webbilder-2.webp","Webbilder-3.webp","Webbilder-4.webp","Webbilder-5.webp",
-   //     "Webbilder-6.webp","Webbilder-7.webp","Webbilder-8.webp","Webbilder-9.webp","Webbilder-10.webp",
-     //   "Webbilder-11.webp","Webbilder-12.webp","Webbilder-13.webp","Webbilder-14.webp","Webbilder-15.webp",
-   //     "Webbilder-16.webp","Webbilder-17.webp","Webbilder-18.webp","Webbilder-19.webp","Webbilder-20.webp",
-     //   "Webbilder-21.webp","Webbilder-22.webp","Webbilder-23.webp","Webbilder-24.webp","Webbilder-25.webp",
-   //     "Webbilder-26.webp","Webbilder-27.webp","Webbilder-28.webp","Webbilder-29.webp","Webbilder-30.webp",
-     //   "Webbilder-31.webp","Webbilder-32.webp","Webbilder-33.webp","Webbilder-34.webp"
-   // ];
+<section>
+    <h2 class="section-title">Ihre Anzeige im Weschnitz-Blitz</h2>
+    <div class="ads-box">
+        <p>Mit uns erreichen Sie Ihre Kunden direkt vor der Haustür – sympathisch, glaubwürdig und effektiv.</p>
+        <ul>
+	    <ul class="benefits-list">
+    <li>✔ <strong>Hohe Akzeptanz:</strong> Kulturmagazin mit starker Leserbindung.</li>
+    <li>✔ <strong>Lange Werbewirkung:</strong> 6 Wochen Relevanz durch den Veranstaltungskalender.</li>
+    <li>✔ <strong>Überall präsent:</strong> Als Printmagazin vor Ort und online als optimiertes E-Paper.</li>
+    <li>✔ <strong>Heimatnah:</strong> 100% Fokus auf Kultur, Menschen und Wandel in unserer Region.</li>
+    <li>✔ <strong>Faire Konditionen:</strong> Attraktive und transparente Anzeigenpreise für lokale Betriebe.</li>
+</ul>
 
-    // Randomize the order once per page load
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
+        <a href="Anzeigenangebot.html" class="btn">Anzeigenangebot & Mediadaten</a>
+    </div>
+</section>
+
+<!-- GALERIE -->
+<section>
+    <h2 class="section-title">Impressionen aus der Region</h2>
+    <div class="gallery-wrapper">
+    <div class="gallery" id="gallery">
+        <!-- <img src="Webbilder-1.webp" alt=""> -->
+        <!-- <img src="Webbilder-2.webp" alt=""> -->
+        <!-- <img src="Webbilder-3.webp" alt=""> -->
+        <img src="Webbilder-4.webp" alt="">
+        <img src="Webbilder-5.webp" alt="">
+        <!-- <img src="Webbilder-6.webp" alt=""> -->
+        <!-- <img src="Webbilder-7.webp" alt=""> -->
+        <!-- <img src="Webbilder-8.webp" alt=""> -->
+        <!-- <img src="Webbilder-9.webp" alt=""> -->
+        <!-- <img src="Webbilder-10.webp" alt=""> -->
+        <!-- <img src="Webbilder-11.webp" alt=""> -->
+        <img src="Webbilder-12.webp" alt="">
+        <img src="Webbilder-13.webp" alt="">
+        <!-- <img src="Webbilder-14.webp" alt=""> -->
+        <!-- <img src="Webbilder-15.webp" alt=""> -->
+        <!-- <img src="Webbilder-16.webp" alt=""> -->
+        <!-- <img src="Webbilder-17.webp" alt=""> -->
+        <!-- <img src="Webbilder-18.webp" alt=""> -->
+        <!-- <img src="Webbilder-19.webp" alt=""> -->
+        <img src="Webbilder-20.webp" alt="">
+        <img src="Webbilder-21.webp" alt="">
+        <img src="Webbilder-22.webp" alt="">
+        <img src="Webbilder-23.webp" alt="">
+        <!-- <img src="Webbilder-24.webp" alt=""> -->
+        <img src="Webbilder-25.webp" alt="">
+        <!-- <img src="Webbilder-26.webp" alt=""> -->
+        <img src="Webbilder-27.webp" alt="">
+        <img src="Webbilder-28.webp" alt="">
+        <!-- <img src="Webbilder-29.webp" alt=""> -->
+        <!-- <img src="Webbilder-30.webp" alt=""> -->
+        <img src="Webbilder-31.webp" alt="">
+        <!-- <img src="Webbilder-32.webp" alt=""> -->
+        <img src="Webbilder-33.webp" alt="">
+        <!-- <img src="Webbilder-34.webp" alt=""> -->
+    </div>
+</div>
+
+    </div>
+    <div class="gallery-controls">
+        <button onclick="prevSlide()">←</button>
+        <button onclick="nextSlide()">→</button>
+    </div>
+</section>
+
+<footer>
+    <a href="Konzept.html">Unser Konzept</a>
+    <a href="Archiv.html">Archiv</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Auslagestellen.html">Auslagestellen</a>
+    <a href="Team.html">Unser Team</a>
+    <a href="Impressum.html">Impressum</a>
+</footer>
+
+<script>
+const gallery = document.getElementById("gallery");
+let index = 0;
+
+function updateSlide() {
+    gallery.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+    if(index < gallery.children.length - 1) {
+        index++;
+        updateSlide();
     }
+}
 
-    const shuffledSources = shuffle([...imageSources]);
-    const background = document.querySelector('.background');
-    let currentIndex = 0;
-    let preloadedImages = [];
-
-    // Show first image immediately
-    const firstImg = new Image();
-    firstImg.src = shuffledSources[currentIndex];
-    firstImg.classList.add('active');
-    firstImg.onload = () => background.appendChild(firstImg);
-    preloadedImages.push(firstImg);
-
-    // Progressive preloader – loads one image at a time in display order
-    function preloadSequentially(index) {
-        if (index >= shuffledSources.length) return;
-        const img = new Image();
-        img.src = shuffledSources[index];
-        preloadedImages[index] = img;
-        img.onload = () => {
-            // Once loaded, start loading the next one
-            preloadSequentially(index + 1);
-        };
+function prevSlide() {
+    if(index > 0) {
+        index--;
+        updateSlide();
     }
+}
 
-    // Start preloading starting from the 2nd image
-    preloadSequentially(1);
+/* Swipe Support */
+let startX = 0;
 
-    function changeImage() {
-        const nextIndex = (currentIndex + 1) % shuffledSources.length;
-        const nextImg = preloadedImages[nextIndex];
+gallery.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
 
-        // If for some reason it's not ready, skip until loaded
-        if (!nextImg || !nextImg.complete) {
-            // Try again in a short moment
-            setTimeout(changeImage, 1000);
-            return;
-        }
+gallery.addEventListener("touchend", e => {
+    let diff = e.changedTouches[0].clientX - startX;
+    if(diff > 50) prevSlide();
+    if(diff < -50) nextSlide();
+});
+</script>
 
-        background.appendChild(nextImg);
-
-        setTimeout(() => {
-            preloadedImages[currentIndex].classList.remove('active');
-            nextImg.classList.add('active');
-        }, 50);
-
-        setTimeout(() => {
-            background.removeChild(preloadedImages[currentIndex]);
-            currentIndex = nextIndex;
-        }, 3000);
-    }
-
-    const initialDisplayTime = 6000;
-    const displayTime = 14500;
-
-    setTimeout(() => {
-        changeImage();
-        setInterval(changeImage, displayTime);
-    }, initialDisplayTime);
-
-    // Fade out header after 30s
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const companyImage = document.getElementById('company-image');
-            companyImage.style.transition = 'opacity 10s ease-out';
-            companyImage.style.opacity = '0';
-        }, 30000);
-    });
-
-    // Redirect mobile users
-    if (window.innerWidth <= 768) {
-        window.location.href = "Magazin.html";
-    }
-    </script>
 </body>
 </html>
-
-
